@@ -175,9 +175,10 @@ def default_composite(samples: list[Sample], bad: frozenset[str] = frozenset()) 
         visibility="full",
         maxHeightPixels="100:50:8",
         windowingFunction="mean",
+        group="regulation",
         priority="1",
-        shortLabel="FIRE Access",
-        longLabel="FIRE percent-accessible chromatin, default cell line panel",
+        shortLabel="FIRE Accessibility",
+        longLabel="Fiber-seq Accessibility",
         html="fire-description.html",
     )
 
@@ -222,7 +223,7 @@ def compendium_composite(samples: list[Sample], bad: frozenset[str] = frozenset(
             "track fireCompendium",
             "compositeTrack on",
             "shortLabel FIRE Compendium",
-            "longLabel Fiber-seq FIRE regulatory element calls across cell lines and tissues",
+            "longLabel Fiber-seq Compendium",
             subgroup_line(1, "view", "Track_Type", view_tags),
             subgroup_line(2, "cellType", "Cell_Type", cell_tags),
             subgroup_line(3, "sample", "Sample", sample_tags),
@@ -233,7 +234,8 @@ def compendium_composite(samples: list[Sample], bad: frozenset[str] = frozenset(
             "visibility hide",
             "type bigWig",
             "html fire-description.html",
-            "priority 20",
+            "group regulation",
+            "priority 2",
         ]
     )
 

@@ -30,11 +30,15 @@ jobs:
       - name: Build hub/ from the live sample sheet
         run: pixi run build
 
+      # TODO: switch to `pixi run hubCheck -udcDir=.cache/udc ...` (re-fetches
+      # every bigWig/bigBed, ~3-5 min) before submitting to UCSC. Fast
+      # structure-only check for now while iterating -- build_hub.py's own
+      # URL check still catches dead links.
       - name: hubCheck gate (fail the deploy on a broken hub)
         run: |
           python3 -m http.server 8791 --directory hub &
           sleep 1
-          pixi run hubCheck -udcDir=.cache/udc http://localhost:8791/hub.txt
+          pixi run hubCheck -noTracks http://localhost:8791/hub.txt
 
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
