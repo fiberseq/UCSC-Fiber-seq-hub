@@ -1,15 +1,15 @@
 <h2>Description</h2>
-<b>F</b>iber-seq <b>I</b>nferred <b>R</b>egulatory <b>E</b>lements
+<b>F</b>iber-seq <b>I</b>nferred <b>R</b>egulatory <b>E</b>lements (FIRE)
 
 <p>
-  These tracks represent
-  <a href="https://github.com/fiberseq/FIRE" target="_blank">FIRE</a> peak calls
-  and chromatin accessibility inferred from Fiber-seq data across a compendium
-  of cell lines and tissues. If you are unfamiliar with Fiber-seq please see
-  the references below for a detailed description, but in short it is useful
-  to think of it as a long-read, single-molecule, haplotype-resolved version
-  of DNaseI/ATAC-seq that can be used to identify regions of chromatin
-  accessibility.
+  This track provides Fiber-seq FIRE peak calls and chromatin accessibility
+  for every sample and track type in this hub, across a compendium of cell
+  lines and tissues. If you are unfamiliar with Fiber-seq please see the
+  references below for a detailed description, but in short it is useful to
+  think of it as a long-read, single-molecule, haplotype-resolved version of
+  DNaseI/ATAC-seq that can be used to identify regions of chromatin
+  accessibility. For a quick multi-sample overview, see the default
+  <b>Fiber-seq Accessibility</b> track.
 </p>
 
 <p>
@@ -21,28 +21,13 @@
 
 <h2>Display Conventions</h2>
 <p>
-  <li>
-    <u>Default track</u>: "FIRE Accessibility" is on by default and overlays
-    the percent-accessible chromatin signal for a panel of commonly used
-    cell lines (GM12878, K562, HepG2, H1, Hap1, Hek293T, Jurkat), each drawn
-    in a different color, as semi-transparent overlapping lines so regions of
-    shared vs. cell-line-specific accessibility are visible at a glance.
-  </li>
-  <li>
-    <u>FIRE Compendium</u>: every sample and track type (percent accessible,
-    all/hap1/hap2, and FIRE peaks) in this hub is also available
-    individually through the "FIRE Compendium" matrix track. Click
-    "FIRE Compendium" to open its configuration page, use the <i>Cell Type</i>
-    drop-down to narrow the sample list to a tissue/cell line of interest,
-    then check the boxes in the sample (columns) x track type (rows) grid for
-    the combinations you want to display, exactly as in ENCODE's composite
-    tracks.
-  </li>
-  <li>
-    <u>Haplotype colors</u>: where a track is split by haplotype, haplotype 1
-    is blue, haplotype 2 is red, and both haplotypes combined ("all") is
-    black, consistently across every sample.
-  </li>
+  Click "Fiber-seq Compendium" to open its configuration page, use the
+  <i>Cell Type</i> drop-down to narrow the sample list to a tissue/cell line
+  of interest, then check the boxes in the sample (columns) x track type
+  (rows) grid for the combinations you want to display, exactly as in
+  ENCODE's composite tracks. Where a track is split by haplotype, haplotype 1
+  is blue, haplotype 2 is red, and both haplotypes combined ("all") is
+  black, consistently across every sample.
 </p>
 
 <h2>Track Descriptions</h2>
@@ -54,14 +39,12 @@
   </li>
 
   <li>
-    <u>FIRE peaks</u>: Peaks are called by identifying FIRE score
+    <u>Peaks</u>: FIRE peaks are called by identifying FIRE score
     local-maxima that have FDR values below a 5% threshold. Once a
     local-maxima is identified, the start and end positions of the peak are
     determined by the median start and end positions of the underlying FIRE
     elements.
   </li>
-
-
 </p>
 
 <h2>Methods</h2>

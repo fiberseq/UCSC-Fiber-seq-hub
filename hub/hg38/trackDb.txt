@@ -14,7 +14,7 @@ group regulation
 priority 1
 shortLabel Fiber-seq Accessibility
 longLabel Fiber-seq Accessibility
-html fire-description.html
+html fire-accessibility-description.html
 
     track fireDefault_GM12878_PM00001
     parent fireDefaultAccessibility
@@ -85,7 +85,7 @@ sortOrder cellType=+ sample=+ view=+
 dragAndDrop subTracks
 visibility hide
 type bigWig
-html fire-description.html
+html fire-compendium-description.html
 group regulation
 priority 2
 

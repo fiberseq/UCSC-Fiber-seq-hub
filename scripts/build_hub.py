@@ -189,7 +189,7 @@ def default_composite(samples: list[Sample], bad: frozenset[str] = frozenset()) 
         priority="1",
         shortLabel="Fiber-seq Accessibility",
         longLabel="Fiber-seq Accessibility",
-        html="fire-description.html",
+        html="fire-accessibility-description.html",
     )
 
     children = []
@@ -243,7 +243,7 @@ def compendium_composite(samples: list[Sample], bad: frozenset[str] = frozenset(
             "dragAndDrop subTracks",
             "visibility hide",
             "type bigWig",
-            "html fire-description.html",
+            "html fire-compendium-description.html",
             "group regulation",
             "priority 2",
         ]
@@ -319,7 +319,7 @@ def build() -> None:
                 "longLabel Fiber-seq chromatin accessibility and regulatory elements",
                 "genomesFile genomes.txt",
                 f"email {CONTACT_EMAIL}",
-                "descriptionUrl hg38/fire-description.html",
+                "descriptionUrl hg38/fire-compendium-description.html",
                 "",
             ]
         )

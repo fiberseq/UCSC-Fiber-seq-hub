@@ -3,4 +3,4 @@ shortLabel Fiber-seq
 longLabel Fiber-seq chromatin accessibility and regulatory elements
 genomesFile genomes.txt
 email mrvollger@genetics.utah.edu
-descriptionUrl hg38/fire-description.html
+descriptionUrl hg38/fire-compendium-description.html
