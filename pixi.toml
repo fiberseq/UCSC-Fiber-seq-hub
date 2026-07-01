@@ -1,0 +1,21 @@
+[workspace]
+name = "ucsc-fiber-seq-hub"
+channels = ["bioconda", "conda-forge"]
+platforms = ["linux-64", "osx-64"]
+# ucsc-hubcheck's dependency on an old mysql-connector-c build conflicts with
+# conda-forge's strict channel priority; bioconda's own pin is fine.
+channel-priority = "disabled"
+
+[dependencies]
+python = ">=3.10"
+ucsc-hubcheck = "*"
+
+[tasks]
+# Regenerate hub/ from the live sample sheet.
+build = "python3 scripts/build_hub.py"
+# Primary check: rebuild + hubCheck -noTracks (structure only, no flaky
+# remote-TLS dependency). Run this before every push.
+validate = "scripts/validate_hub.sh"
+# Secondary check: also re-fetches every bigWig/bigBed through hubCheck.
+# What CI runs as the authoritative gate before deploying.
+validate-full = "scripts/validate_hub.sh --full"

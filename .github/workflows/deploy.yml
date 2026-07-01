@@ -1,0 +1,52 @@
+name: Deploy hub to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/**"
+      - "hub/**"
+      - "pixi.toml"
+      - "pixi.lock"
+      - ".github/workflows/deploy.yml"
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: prefix-dev/setup-pixi@v0.8.1
+
+      - name: Build hub/ from the live sample sheet
+        run: pixi run build
+
+      - name: hubCheck gate (fail the deploy on a broken hub)
+        run: |
+          python3 -m http.server 8791 --directory hub &
+          sleep 1
+          pixi run hubCheck -udcDir=.cache/udc http://localhost:8791/hub.txt
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: hub
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

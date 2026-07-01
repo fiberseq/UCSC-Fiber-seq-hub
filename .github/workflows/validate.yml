@@ -1,0 +1,35 @@
+name: Validate hub
+
+on:
+  pull_request:
+    paths:
+      - "scripts/**"
+      - "hub/**"
+      - "pixi.toml"
+      - "pixi.lock"
+      - ".github/workflows/validate.yml"
+  push:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: prefix-dev/setup-pixi@v0.8.1
+
+      - name: Build hub/ from the live sample sheet
+        run: pixi run build
+
+      - name: Fail if the build produced uncommitted changes
+        run: |
+          git diff --exit-code -- hub/ || {
+            echo "::error::hub/ is out of date. Run 'pixi run build' and commit the result."
+            exit 1
+          }
+
+      - name: hubCheck (structure + remote data files)
+        run: |
+          python3 -m http.server 8791 --directory hub &
+          sleep 1
+          pixi run hubCheck -udcDir=.cache/udc http://localhost:8791/hub.txt
