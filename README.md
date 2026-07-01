@@ -5,21 +5,27 @@ for hg38 exposing [FIRE](https://github.com/fiberseq/FIRE) (Fiber-seq
 Inferred Regulatory Elements) chromatin accessibility and regulatory element
 calls across a compendium of cell lines and tissues.
 
-Hub URL (once deployed): `https://fiberseq.github.io/UCSC-Fiber-seq-hub/hub.txt`
+Hub URL: `https://fiberseq.github.io/UCSC-Fiber-seq-hub/hub.txt`
 
 Load it in the UCSC Genome Browser via **My Data → Track Hubs → My Hubs**,
 or append `&hubUrl=https://fiberseq.github.io/UCSC-Fiber-seq-hub/hub.txt`
-to any `hgTracks` URL.
+to any `hgTracks` URL. Add `&udcTimeout=1` while iterating -- UCSC otherwise
+caches hub files for up to 5 minutes.
 
 ## What's in the hub
 
-- **FIRE Accessibility** (on by default): percent-accessible chromatin for a
-  panel of commonly used cell lines, overlaid as semi-transparent lines in
-  different colors.
-- **FIRE Compendium**: every sample × the 4 file types the sheet links
-  (percent accessible all/hap1/hap2, and FIRE peaks), organized as an
-  ENCODE-style composite matrix. Use the *Cell Type* filter to narrow the
-  sample list, then check boxes in the sample × track-type grid.
+Both tracks are grouped with "Regulation" so they sort next to ENCODE's
+cCREs/H3K27Ac tracks, and each has its own description page (shared Methods/
+Credits/References, distinct Display Conventions).
+
+- **Fiber-seq Accessibility** (`fire-accessibility-description.html`, on by
+  default): percent-accessible chromatin for a panel of commonly used cell
+  lines, overlaid as semi-transparent lines in different colors.
+- **Fiber-seq Compendium** (`fire-compendium-description.html`): every
+  sample × the 4 file types the sheet links (percent accessible
+  all/hap1/hap2, and peaks), organized as an ENCODE-style composite matrix.
+  Use the *Cell Type* filter to narrow the sample list, then check boxes in
+  the sample × track-type grid.
 
 Each sample's raw bigWig/bigBed files live on Kopah S3
 (`s3.kopah.uw.edu/.../hashed.PacBio-Fiber-seq/<PS-ID>/...`) as their own
@@ -65,10 +71,12 @@ pixi run validate-full     # also re-fetches every bigWig/bigBed via hubCheck
 ```
 
 `validate-full` is secondary — data-file reachability is already covered by
-`build_hub.py`'s own URL check. CI (`.github/workflows/validate.yml`) runs
-the full check on every PR and push to `main` as the authoritative gate;
-`.github/workflows/deploy.yml` re-validates and then deploys `hub/` to
-GitHub Pages. Both use the same `pixi.toml` environment as local dev.
+`build_hub.py`'s own URL check. Both CI workflows currently run the fast
+`-noTracks` check (`.github/workflows/validate.yml` on every PR/push,
+`.github/workflows/deploy.yml` before publishing to GitHub Pages) to keep
+the iterate-and-deploy loop quick. **Before submitting to UCSC**, switch
+`deploy.yml` back to the full `-udcDir` check (see the TODO in that file) so
+a broken data link can't go live unnoticed.
 
 ## Submitting to UCSC
 
