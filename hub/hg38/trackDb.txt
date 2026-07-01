@@ -1,4 +1,4 @@
-# Default track: overlapping FIRE percent-accessible chromatin, one color per sample
+# Default track: overlapping Fiber-seq percent-accessible chromatin, one color per sample
 track fireDefaultAccessibility
 container multiWig
 aggregate transparentOverlay
@@ -12,7 +12,7 @@ maxHeightPixels 100:50:8
 windowingFunction mean
 group regulation
 priority 1
-shortLabel FIRE Accessibility
+shortLabel Fiber-seq Accessibility
 longLabel Fiber-seq Accessibility
 html fire-description.html
 
@@ -22,7 +22,7 @@ html fire-description.html
     type bigWig
     color 230,159,0
     shortLabel GM12878
-    longLabel GM12878 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) FIRE percent accessi...
+    longLabel GM12878 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) Fiber-seq percent ac...
 
     track fireDefault_K562_PM00004
     parent fireDefaultAccessibility
@@ -30,7 +30,7 @@ html fire-description.html
     type bigWig
     color 86,180,233
     shortLabel K562
-    longLabel K562 (Erythroleukemia / myeloid) FIRE percent accessible chromatin, PM00004
+    longLabel K562 (Erythroleukemia / myeloid) Fiber-seq percent accessible chromatin, PM00004
 
     track fireDefault_HepG2_PM00005
     parent fireDefaultAccessibility
@@ -38,7 +38,7 @@ html fire-description.html
     type bigWig
     color 0,158,115
     shortLabel HepG2
-    longLabel HepG2 (Hepatocyte (liver)) FIRE percent accessible chromatin, PM00005
+    longLabel HepG2 (Hepatocyte (liver)) Fiber-seq percent accessible chromatin, PM00005
 
     track fireDefault_H1_PM00010
     parent fireDefaultAccessibility
@@ -46,7 +46,7 @@ html fire-description.html
     type bigWig
     color 240,228,66
     shortLabel H1
-    longLabel H1 (Embryonic stem cell) FIRE percent accessible chromatin, PM00010
+    longLabel H1 (Embryonic stem cell) Fiber-seq percent accessible chromatin, PM00010
 
     track fireDefault_Hap1_PM00008
     parent fireDefaultAccessibility
@@ -54,7 +54,7 @@ html fire-description.html
     type bigWig
     color 0,114,178
     shortLabel Hap1
-    longLabel Hap1 (Myeloid (near-haploid)) FIRE percent accessible chromatin, PM00008
+    longLabel Hap1 (Myeloid (near-haploid)) Fiber-seq percent accessible chromatin, PM00008
 
     track fireDefault_Hek293T_PS01332
     parent fireDefaultAccessibility
@@ -62,7 +62,7 @@ html fire-description.html
     type bigWig
     color 213,94,0
     shortLabel Hek293T
-    longLabel Hek293T (Human embryonic kidney) FIRE percent accessible chromatin, PS01332
+    longLabel Hek293T (Human embryonic kidney) Fiber-seq percent accessible chromatin, PS01332
 
     track fireDefault_Jurkat_PM00009
     parent fireDefaultAccessibility
@@ -70,13 +70,13 @@ html fire-description.html
     type bigWig
     color 204,121,167
     shortLabel Jurkat
-    longLabel Jurkat (T-lymphocyte) FIRE percent accessible chromatin, PM00009
+    longLabel Jurkat (T-lymphocyte) Fiber-seq percent accessible chromatin, PM00009
 
 track fireCompendium
 compositeTrack on
-shortLabel FIRE Compendium
+shortLabel Fiber-seq Compendium
 longLabel Fiber-seq Compendium
-subGroup1 view Track_Type ACCESSALL=Percent_Accessible_All ACCESSHAP1=Percent_Accessible_Hap1 ACCESSHAP2=Percent_Accessible_Hap2 PEAKS=FIRE_Peaks
+subGroup1 view Track_Type ACCESSALL=Percent_Accessible_All ACCESSHAP1=Percent_Accessible_Hap1 ACCESSHAP2=Percent_Accessible_Hap2 PEAKS=Peaks
 subGroup2 cellType Cell_Type Lymphoblastoid_B_lymphocyte_EBV_transformed=Lymphoblastoid_B-lymphocyte_EBV-transformed Erythroleukemia_myeloid=Erythroleukemia_myeloid Hepatocyte_liver=Hepatocyte_liver Embryonic_stem_cell=Embryonic_stem_cell Myeloid_near_haploid=Myeloid_near-haploid Human_embryonic_kidney=Human_embryonic_kidney T_lymphocyte=T-lymphocyte Pancreatic_ductal_epithelial=Pancreatic_ductal_epithelial Monocyte_myeloid=Monocyte_myeloid Near_haploid_myeloid_CML_derived=Near-haploid_myeloid_CML-derived Lung_epithelial_adenocarcinoma=Lung_epithelial_adenocarcinoma Breast_epithelial_adenocarcinoma=Breast_epithelial_adenocarcinoma Colon_epithelial_colorectal_carcinoma=Colon_epithelial_colorectal_carcinoma Colon_epithelial_colorectal_adenocarcinoma=Colon_epithelial_colorectal_adenocarcinoma Induced_pluripotent_stem_cell_iPSC=Induced_pluripotent_stem_cell_iPSC Pancreatic_ductal_adenocarcinoma_single_cell_clone=Pancreatic_ductal_adenocarcinoma_single-cell_clone
 subGroup3 sample Sample GM12878_PM00001=GM12878_PM00001 K562_PM00004=K562_PM00004 HepG2_PM00005=HepG2_PM00005 H1_PM00010=H1_PM00010 Hap1_PM00008=Hap1_PM00008 Hek293T_PS01332=Hek293T_PS01332 Jurkat_PM00009=Jurkat_PM00009 HG002_PM00002=HG002_PM00002 Panc1_PM00006=Panc1_PM00006 THP_1_PM00007=THP-1_PM00007 H9_PM00011=H9_PM00011 HG01123_PS00971=HG01123_PS00971 HG01258_PS00972=HG01258_PS00972 HG01358_PS00973=HG01358_PS00973 HG01361_PS00974=HG01361_PS00974 HG01891_PS00975=HG01891_PS00975 HG02071_PS00976=HG02071_PS00976 HG02074_PS00977=HG02074_PS00977 HG02132_PS00978=HG02132_PS00978 HG02135_PS00979=HG02135_PS00979 HG02257_PS00980=HG02257_PS00980 HG02486_PS00981=HG02486_PS00981 HG02559_PS00982=HG02559_PS00982 HG02572_PS00983=HG02572_PS00983 HG02717_PS00984=HG02717_PS00984 HG02886_PS00985=HG02886_PS00985 HG03516_PS00986=HG03516_PS00986 HG03804_PS00987=HG03804_PS00987 HG03942_PS00988=HG03942_PS00988 HG04160_PS00989=HG04160_PS00989 HG04187_PS00990=HG04187_PS00990 Hap1_PS01280=Hap1_PS01280 A549_PS01302=A549_PS01302 MCF_7_PS01305=MCF-7_PS01305 HCT116_PS01314=HCT116_PS01314 Caco_2_PS01319=Caco-2_PS01319 WTC_11_PS01388=WTC-11_PS01388 GM28572_PS01517=GM28572_PS01517 GM28570_PS01518=GM28570_PS01518 GM25456_PS01519=GM25456_PS01519 GM25455_PS01520=GM25455_PS01520 GM27730_PS01524=GM27730_PS01524 HG008_SC14_PS01680=HG008-SC14_PS01680 HG008_3E4_PS01682=HG008-3E4_PS01682 HG008_SC24_PS01684=HG008-SC24_PS01684
 dimensions dimX=sample dimY=view dimA=cellType
@@ -91,7 +91,7 @@ priority 2
 
 
 track fireCompendiumViewACCESSALL
-shortLabel Percent Access...
+shortLabel Percent Accessible All
 view ACCESSALL
 visibility hide
 parent fireCompendium
@@ -108,7 +108,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSALL cellType=Lymphoblastoid_B_lymphocyte_EBV_transformed sample=GM12878_PM00001
     shortLabel GM12878 Percent
-    longLabel GM12878 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) FIRE Percent Accessi...
+    longLabel GM12878 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) Fiber-seq Percent Ac...
 
     track fireComp_ACCESSALL_K562_PM00004
     parent fireCompendiumViewACCESSALL
@@ -116,7 +116,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSALL cellType=Erythroleukemia_myeloid sample=K562_PM00004
     shortLabel K562 Percent
-    longLabel K562 (Erythroleukemia / myeloid) FIRE Percent Accessible All, PM00004
+    longLabel K562 (Erythroleukemia / myeloid) Fiber-seq Percent Accessible All, PM00004
 
     track fireComp_ACCESSALL_HepG2_PM00005
     parent fireCompendiumViewACCESSALL
@@ -124,7 +124,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSALL cellType=Hepatocyte_liver sample=HepG2_PM00005
     shortLabel HepG2 Percent
-    longLabel HepG2 (Hepatocyte (liver)) FIRE Percent Accessible All, PM00005
+    longLabel HepG2 (Hepatocyte (liver)) Fiber-seq Percent Accessible All, PM00005
 
     track fireComp_ACCESSALL_H1_PM00010
     parent fireCompendiumViewACCESSALL
@@ -132,7 +132,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSALL cellType=Embryonic_stem_cell sample=H1_PM00010
     shortLabel H1 Percent
-    longLabel H1 (Embryonic stem cell) FIRE Percent Accessible All, PM00010
+    longLabel H1 (Embryonic stem cell) Fiber-seq Percent Accessible All, PM00010
 
     track fireComp_ACCESSALL_Hap1_PM00008
     parent fireCompendiumViewACCESSALL
@@ -140,7 +140,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSALL cellType=Myeloid_near_haploid sample=Hap1_PM00008
     shortLabel Hap1 Percent
-    longLabel Hap1 (Myeloid (near-haploid)) FIRE Percent Accessible All, PM00008
+    longLabel Hap1 (Myeloid (near-haploid)) Fiber-seq Percent Accessible All, PM00008
 
     track fireComp_ACCESSALL_Hek293T_PS01332
     parent fireCompendiumViewACCESSALL
@@ -148,7 +148,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSALL cellType=Human_embryonic_kidney sample=Hek293T_PS01332
     shortLabel Hek293T Percent
-    longLabel Hek293T (Human embryonic kidney) FIRE Percent Accessible All, PS01332
+    longLabel Hek293T (Human embryonic kidney) Fiber-seq Percent Accessible All, PS01332
 
     track fireComp_ACCESSALL_Jurkat_PM00009
     parent fireCompendiumViewACCESSALL
@@ -156,7 +156,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSALL cellType=T_lymphocyte sample=Jurkat_PM00009
     shortLabel Jurkat Percent
-    longLabel Jurkat (T-lymphocyte) FIRE Percent Accessible All, PM00009
+    longLabel Jurkat (T-lymphocyte) Fiber-seq Percent Accessible All, PM00009
 
     track fireComp_ACCESSALL_HG002_PM00002
     parent fireCompendiumViewACCESSALL
@@ -164,7 +164,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSALL cellType=Lymphoblastoid_B_lymphocyte_EBV_transformed sample=HG002_PM00002
     shortLabel HG002 Percent
-    longLabel HG002 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) FIRE Percent Accessibl...
+    longLabel HG002 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) Fiber-seq Percent Acce...
 
     track fireComp_ACCESSALL_Panc1_PM00006
     parent fireCompendiumViewACCESSALL
@@ -172,7 +172,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSALL cellType=Pancreatic_ductal_epithelial sample=Panc1_PM00006
     shortLabel Panc1 Percent
-    longLabel Panc1 (Pancreatic ductal epithelial) FIRE Percent Accessible All, PM00006
+    longLabel Panc1 (Pancreatic ductal epithelial) Fiber-seq Percent Accessible All, PM00006
 
     track fireComp_ACCESSALL_THP_1_PM00007
     parent fireCompendiumViewACCESSALL
@@ -180,7 +180,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSALL cellType=Monocyte_myeloid sample=THP_1_PM00007
     shortLabel THP-1 Percent
-    longLabel THP-1 (Monocyte (myeloid)) FIRE Percent Accessible All, PM00007
+    longLabel THP-1 (Monocyte (myeloid)) Fiber-seq Percent Accessible All, PM00007
 
     track fireComp_ACCESSALL_H9_PM00011
     parent fireCompendiumViewACCESSALL
@@ -188,7 +188,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSALL cellType=Embryonic_stem_cell sample=H9_PM00011
     shortLabel H9 Percent
-    longLabel H9 (Embryonic stem cell) FIRE Percent Accessible All, PM00011
+    longLabel H9 (Embryonic stem cell) Fiber-seq Percent Accessible All, PM00011
 
     track fireComp_ACCESSALL_HG01123_PS00971
     parent fireCompendiumViewACCESSALL
@@ -196,7 +196,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSALL cellType=Lymphoblastoid_B_lymphocyte_EBV_transformed sample=HG01123_PS00971
     shortLabel HG01123 Percent
-    longLabel HG01123 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) FIRE Percent Accessi...
+    longLabel HG01123 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) Fiber-seq Percent Ac...
 
     track fireComp_ACCESSALL_HG01258_PS00972
     parent fireCompendiumViewACCESSALL
@@ -204,7 +204,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSALL cellType=Lymphoblastoid_B_lymphocyte_EBV_transformed sample=HG01258_PS00972
     shortLabel HG01258 Percent
-    longLabel HG01258 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) FIRE Percent Accessi...
+    longLabel HG01258 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) Fiber-seq Percent Ac...
 
     track fireComp_ACCESSALL_HG01358_PS00973
     parent fireCompendiumViewACCESSALL
@@ -212,7 +212,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSALL cellType=Lymphoblastoid_B_lymphocyte_EBV_transformed sample=HG01358_PS00973
     shortLabel HG01358 Percent
-    longLabel HG01358 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) FIRE Percent Accessi...
+    longLabel HG01358 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) Fiber-seq Percent Ac...
 
     track fireComp_ACCESSALL_HG01361_PS00974
     parent fireCompendiumViewACCESSALL
@@ -220,7 +220,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSALL cellType=Lymphoblastoid_B_lymphocyte_EBV_transformed sample=HG01361_PS00974
     shortLabel HG01361 Percent
-    longLabel HG01361 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) FIRE Percent Accessi...
+    longLabel HG01361 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) Fiber-seq Percent Ac...
 
     track fireComp_ACCESSALL_HG01891_PS00975
     parent fireCompendiumViewACCESSALL
@@ -228,7 +228,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSALL cellType=Lymphoblastoid_B_lymphocyte_EBV_transformed sample=HG01891_PS00975
     shortLabel HG01891 Percent
-    longLabel HG01891 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) FIRE Percent Accessi...
+    longLabel HG01891 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) Fiber-seq Percent Ac...
 
     track fireComp_ACCESSALL_HG02071_PS00976
     parent fireCompendiumViewACCESSALL
@@ -236,7 +236,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSALL cellType=Lymphoblastoid_B_lymphocyte_EBV_transformed sample=HG02071_PS00976
     shortLabel HG02071 Percent
-    longLabel HG02071 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) FIRE Percent Accessi...
+    longLabel HG02071 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) Fiber-seq Percent Ac...
 
     track fireComp_ACCESSALL_HG02074_PS00977
     parent fireCompendiumViewACCESSALL
@@ -244,7 +244,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSALL cellType=Lymphoblastoid_B_lymphocyte_EBV_transformed sample=HG02074_PS00977
     shortLabel HG02074 Percent
-    longLabel HG02074 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) FIRE Percent Accessi...
+    longLabel HG02074 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) Fiber-seq Percent Ac...
 
     track fireComp_ACCESSALL_HG02132_PS00978
     parent fireCompendiumViewACCESSALL
@@ -252,7 +252,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSALL cellType=Lymphoblastoid_B_lymphocyte_EBV_transformed sample=HG02132_PS00978
     shortLabel HG02132 Percent
-    longLabel HG02132 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) FIRE Percent Accessi...
+    longLabel HG02132 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) Fiber-seq Percent Ac...
 
     track fireComp_ACCESSALL_HG02135_PS00979
     parent fireCompendiumViewACCESSALL
@@ -260,7 +260,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSALL cellType=Lymphoblastoid_B_lymphocyte_EBV_transformed sample=HG02135_PS00979
     shortLabel HG02135 Percent
-    longLabel HG02135 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) FIRE Percent Accessi...
+    longLabel HG02135 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) Fiber-seq Percent Ac...
 
     track fireComp_ACCESSALL_HG02257_PS00980
     parent fireCompendiumViewACCESSALL
@@ -268,7 +268,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSALL cellType=Lymphoblastoid_B_lymphocyte_EBV_transformed sample=HG02257_PS00980
     shortLabel HG02257 Percent
-    longLabel HG02257 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) FIRE Percent Accessi...
+    longLabel HG02257 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) Fiber-seq Percent Ac...
 
     track fireComp_ACCESSALL_HG02486_PS00981
     parent fireCompendiumViewACCESSALL
@@ -276,7 +276,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSALL cellType=Lymphoblastoid_B_lymphocyte_EBV_transformed sample=HG02486_PS00981
     shortLabel HG02486 Percent
-    longLabel HG02486 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) FIRE Percent Accessi...
+    longLabel HG02486 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) Fiber-seq Percent Ac...
 
     track fireComp_ACCESSALL_HG02559_PS00982
     parent fireCompendiumViewACCESSALL
@@ -284,7 +284,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSALL cellType=Lymphoblastoid_B_lymphocyte_EBV_transformed sample=HG02559_PS00982
     shortLabel HG02559 Percent
-    longLabel HG02559 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) FIRE Percent Accessi...
+    longLabel HG02559 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) Fiber-seq Percent Ac...
 
     track fireComp_ACCESSALL_HG02572_PS00983
     parent fireCompendiumViewACCESSALL
@@ -292,7 +292,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSALL cellType=Lymphoblastoid_B_lymphocyte_EBV_transformed sample=HG02572_PS00983
     shortLabel HG02572 Percent
-    longLabel HG02572 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) FIRE Percent Accessi...
+    longLabel HG02572 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) Fiber-seq Percent Ac...
 
     track fireComp_ACCESSALL_HG02717_PS00984
     parent fireCompendiumViewACCESSALL
@@ -300,7 +300,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSALL cellType=Lymphoblastoid_B_lymphocyte_EBV_transformed sample=HG02717_PS00984
     shortLabel HG02717 Percent
-    longLabel HG02717 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) FIRE Percent Accessi...
+    longLabel HG02717 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) Fiber-seq Percent Ac...
 
     track fireComp_ACCESSALL_HG02886_PS00985
     parent fireCompendiumViewACCESSALL
@@ -308,7 +308,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSALL cellType=Lymphoblastoid_B_lymphocyte_EBV_transformed sample=HG02886_PS00985
     shortLabel HG02886 Percent
-    longLabel HG02886 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) FIRE Percent Accessi...
+    longLabel HG02886 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) Fiber-seq Percent Ac...
 
     track fireComp_ACCESSALL_HG03516_PS00986
     parent fireCompendiumViewACCESSALL
@@ -316,7 +316,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSALL cellType=Lymphoblastoid_B_lymphocyte_EBV_transformed sample=HG03516_PS00986
     shortLabel HG03516 Percent
-    longLabel HG03516 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) FIRE Percent Accessi...
+    longLabel HG03516 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) Fiber-seq Percent Ac...
 
     track fireComp_ACCESSALL_HG03804_PS00987
     parent fireCompendiumViewACCESSALL
@@ -324,7 +324,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSALL cellType=Lymphoblastoid_B_lymphocyte_EBV_transformed sample=HG03804_PS00987
     shortLabel HG03804 Percent
-    longLabel HG03804 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) FIRE Percent Accessi...
+    longLabel HG03804 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) Fiber-seq Percent Ac...
 
     track fireComp_ACCESSALL_HG03942_PS00988
     parent fireCompendiumViewACCESSALL
@@ -332,7 +332,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSALL cellType=Lymphoblastoid_B_lymphocyte_EBV_transformed sample=HG03942_PS00988
     shortLabel HG03942 Percent
-    longLabel HG03942 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) FIRE Percent Accessi...
+    longLabel HG03942 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) Fiber-seq Percent Ac...
 
     track fireComp_ACCESSALL_HG04160_PS00989
     parent fireCompendiumViewACCESSALL
@@ -340,7 +340,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSALL cellType=Lymphoblastoid_B_lymphocyte_EBV_transformed sample=HG04160_PS00989
     shortLabel HG04160 Percent
-    longLabel HG04160 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) FIRE Percent Accessi...
+    longLabel HG04160 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) Fiber-seq Percent Ac...
 
     track fireComp_ACCESSALL_HG04187_PS00990
     parent fireCompendiumViewACCESSALL
@@ -348,7 +348,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSALL cellType=Lymphoblastoid_B_lymphocyte_EBV_transformed sample=HG04187_PS00990
     shortLabel HG04187 Percent
-    longLabel HG04187 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) FIRE Percent Accessi...
+    longLabel HG04187 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) Fiber-seq Percent Ac...
 
     track fireComp_ACCESSALL_Hap1_PS01280
     parent fireCompendiumViewACCESSALL
@@ -356,7 +356,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSALL cellType=Near_haploid_myeloid_CML_derived sample=Hap1_PS01280
     shortLabel Hap1 Percent
-    longLabel Hap1 (Near-haploid myeloid (CML-derived)) FIRE Percent Accessible All, PS01280
+    longLabel Hap1 (Near-haploid myeloid (CML-derived)) Fiber-seq Percent Accessible All, P...
 
     track fireComp_ACCESSALL_A549_PS01302
     parent fireCompendiumViewACCESSALL
@@ -364,7 +364,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSALL cellType=Lung_epithelial_adenocarcinoma sample=A549_PS01302
     shortLabel A549 Percent
-    longLabel A549 (Lung epithelial (adenocarcinoma)) FIRE Percent Accessible All, PS01302
+    longLabel A549 (Lung epithelial (adenocarcinoma)) Fiber-seq Percent Accessible All, PS0...
 
     track fireComp_ACCESSALL_MCF_7_PS01305
     parent fireCompendiumViewACCESSALL
@@ -372,7 +372,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSALL cellType=Breast_epithelial_adenocarcinoma sample=MCF_7_PS01305
     shortLabel MCF-7 Percent
-    longLabel MCF-7 (Breast epithelial (adenocarcinoma)) FIRE Percent Accessible All, PS01305
+    longLabel MCF-7 (Breast epithelial (adenocarcinoma)) Fiber-seq Percent Accessible All,...
 
     track fireComp_ACCESSALL_HCT116_PS01314
     parent fireCompendiumViewACCESSALL
@@ -380,7 +380,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSALL cellType=Colon_epithelial_colorectal_carcinoma sample=HCT116_PS01314
     shortLabel HCT116 Percent
-    longLabel HCT116 (Colon epithelial (colorectal carcinoma)) FIRE Percent Accessible All,...
+    longLabel HCT116 (Colon epithelial (colorectal carcinoma)) Fiber-seq Percent Accessible...
 
     track fireComp_ACCESSALL_Caco_2_PS01319
     parent fireCompendiumViewACCESSALL
@@ -388,7 +388,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSALL cellType=Colon_epithelial_colorectal_adenocarcinoma sample=Caco_2_PS01319
     shortLabel Caco-2 Percent
-    longLabel Caco-2 (Colon epithelial (colorectal adenocarcinoma)) FIRE Percent Accessible...
+    longLabel Caco-2 (Colon epithelial (colorectal adenocarcinoma)) Fiber-seq Percent Acces...
 
     track fireComp_ACCESSALL_WTC_11_PS01388
     parent fireCompendiumViewACCESSALL
@@ -396,7 +396,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSALL cellType=Induced_pluripotent_stem_cell_iPSC sample=WTC_11_PS01388
     shortLabel WTC-11 Percent
-    longLabel WTC-11 (Induced pluripotent stem cell (iPSC)) FIRE Percent Accessible All, PS...
+    longLabel WTC-11 (Induced pluripotent stem cell (iPSC)) Fiber-seq Percent Accessible Al...
 
     track fireComp_ACCESSALL_GM28572_PS01517
     parent fireCompendiumViewACCESSALL
@@ -404,7 +404,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSALL cellType=Lymphoblastoid_B_lymphocyte_EBV_transformed sample=GM28572_PS01517
     shortLabel GM28572 Percent
-    longLabel GM28572 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) FIRE Percent Accessi...
+    longLabel GM28572 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) Fiber-seq Percent Ac...
 
     track fireComp_ACCESSALL_GM28570_PS01518
     parent fireCompendiumViewACCESSALL
@@ -412,7 +412,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSALL cellType=Lymphoblastoid_B_lymphocyte_EBV_transformed sample=GM28570_PS01518
     shortLabel GM28570 Percent
-    longLabel GM28570 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) FIRE Percent Accessi...
+    longLabel GM28570 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) Fiber-seq Percent Ac...
 
     track fireComp_ACCESSALL_GM25456_PS01519
     parent fireCompendiumViewACCESSALL
@@ -420,7 +420,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSALL cellType=Lymphoblastoid_B_lymphocyte_EBV_transformed sample=GM25456_PS01519
     shortLabel GM25456 Percent
-    longLabel GM25456 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) FIRE Percent Accessi...
+    longLabel GM25456 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) Fiber-seq Percent Ac...
 
     track fireComp_ACCESSALL_GM25455_PS01520
     parent fireCompendiumViewACCESSALL
@@ -428,7 +428,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSALL cellType=Lymphoblastoid_B_lymphocyte_EBV_transformed sample=GM25455_PS01520
     shortLabel GM25455 Percent
-    longLabel GM25455 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) FIRE Percent Accessi...
+    longLabel GM25455 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) Fiber-seq Percent Ac...
 
     track fireComp_ACCESSALL_GM27730_PS01524
     parent fireCompendiumViewACCESSALL
@@ -436,7 +436,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSALL cellType=Lymphoblastoid_B_lymphocyte_EBV_transformed sample=GM27730_PS01524
     shortLabel GM27730 Percent
-    longLabel GM27730 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) FIRE Percent Accessi...
+    longLabel GM27730 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) Fiber-seq Percent Ac...
 
     track fireComp_ACCESSALL_HG008_SC14_PS01680
     parent fireCompendiumViewACCESSALL
@@ -444,7 +444,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSALL cellType=Pancreatic_ductal_adenocarcinoma_single_cell_clone sample=HG008_SC14_PS01680
     shortLabel HG008-SC14 Per...
-    longLabel HG008-SC14 (Pancreatic ductal adenocarcinoma (single-cell clone)) FIRE Percen...
+    longLabel HG008-SC14 (Pancreatic ductal adenocarcinoma (single-cell clone)) Fiber-seq P...
 
     track fireComp_ACCESSALL_HG008_3E4_PS01682
     parent fireCompendiumViewACCESSALL
@@ -452,7 +452,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSALL cellType=Pancreatic_ductal_adenocarcinoma_single_cell_clone sample=HG008_3E4_PS01682
     shortLabel HG008-3E4 Percent
-    longLabel HG008-3E4 (Pancreatic ductal adenocarcinoma (single-cell clone)) FIRE Percent...
+    longLabel HG008-3E4 (Pancreatic ductal adenocarcinoma (single-cell clone)) Fiber-seq Pe...
 
     track fireComp_ACCESSALL_HG008_SC24_PS01684
     parent fireCompendiumViewACCESSALL
@@ -460,11 +460,11 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSALL cellType=Pancreatic_ductal_adenocarcinoma_single_cell_clone sample=HG008_SC24_PS01684
     shortLabel HG008-SC24 Per...
-    longLabel HG008-SC24 (Pancreatic ductal adenocarcinoma (single-cell clone)) FIRE Percen...
+    longLabel HG008-SC24 (Pancreatic ductal adenocarcinoma (single-cell clone)) Fiber-seq P...
 
 
 track fireCompendiumViewACCESSHAP1
-shortLabel Percent Access...
+shortLabel Percent Accessible Hap1
 view ACCESSHAP1
 visibility hide
 parent fireCompendium
@@ -481,7 +481,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSHAP1 cellType=Lymphoblastoid_B_lymphocyte_EBV_transformed sample=GM12878_PM00001
     shortLabel GM12878 Percent
-    longLabel GM12878 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) FIRE Percent Accessi...
+    longLabel GM12878 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) Fiber-seq Percent Ac...
 
     track fireComp_ACCESSHAP1_K562_PM00004
     parent fireCompendiumViewACCESSHAP1
@@ -489,7 +489,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSHAP1 cellType=Erythroleukemia_myeloid sample=K562_PM00004
     shortLabel K562 Percent
-    longLabel K562 (Erythroleukemia / myeloid) FIRE Percent Accessible Hap1, PM00004
+    longLabel K562 (Erythroleukemia / myeloid) Fiber-seq Percent Accessible Hap1, PM00004
 
     track fireComp_ACCESSHAP1_HepG2_PM00005
     parent fireCompendiumViewACCESSHAP1
@@ -497,7 +497,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSHAP1 cellType=Hepatocyte_liver sample=HepG2_PM00005
     shortLabel HepG2 Percent
-    longLabel HepG2 (Hepatocyte (liver)) FIRE Percent Accessible Hap1, PM00005
+    longLabel HepG2 (Hepatocyte (liver)) Fiber-seq Percent Accessible Hap1, PM00005
 
     track fireComp_ACCESSHAP1_H1_PM00010
     parent fireCompendiumViewACCESSHAP1
@@ -505,7 +505,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSHAP1 cellType=Embryonic_stem_cell sample=H1_PM00010
     shortLabel H1 Percent
-    longLabel H1 (Embryonic stem cell) FIRE Percent Accessible Hap1, PM00010
+    longLabel H1 (Embryonic stem cell) Fiber-seq Percent Accessible Hap1, PM00010
 
     track fireComp_ACCESSHAP1_Hap1_PM00008
     parent fireCompendiumViewACCESSHAP1
@@ -513,7 +513,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSHAP1 cellType=Myeloid_near_haploid sample=Hap1_PM00008
     shortLabel Hap1 Percent
-    longLabel Hap1 (Myeloid (near-haploid)) FIRE Percent Accessible Hap1, PM00008
+    longLabel Hap1 (Myeloid (near-haploid)) Fiber-seq Percent Accessible Hap1, PM00008
 
     track fireComp_ACCESSHAP1_Hek293T_PS01332
     parent fireCompendiumViewACCESSHAP1
@@ -521,7 +521,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSHAP1 cellType=Human_embryonic_kidney sample=Hek293T_PS01332
     shortLabel Hek293T Percent
-    longLabel Hek293T (Human embryonic kidney) FIRE Percent Accessible Hap1, PS01332
+    longLabel Hek293T (Human embryonic kidney) Fiber-seq Percent Accessible Hap1, PS01332
 
     track fireComp_ACCESSHAP1_Jurkat_PM00009
     parent fireCompendiumViewACCESSHAP1
@@ -529,7 +529,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSHAP1 cellType=T_lymphocyte sample=Jurkat_PM00009
     shortLabel Jurkat Percent
-    longLabel Jurkat (T-lymphocyte) FIRE Percent Accessible Hap1, PM00009
+    longLabel Jurkat (T-lymphocyte) Fiber-seq Percent Accessible Hap1, PM00009
 
     track fireComp_ACCESSHAP1_HG002_PM00002
     parent fireCompendiumViewACCESSHAP1
@@ -537,7 +537,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSHAP1 cellType=Lymphoblastoid_B_lymphocyte_EBV_transformed sample=HG002_PM00002
     shortLabel HG002 Percent
-    longLabel HG002 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) FIRE Percent Accessibl...
+    longLabel HG002 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) Fiber-seq Percent Acce...
 
     track fireComp_ACCESSHAP1_Panc1_PM00006
     parent fireCompendiumViewACCESSHAP1
@@ -545,7 +545,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSHAP1 cellType=Pancreatic_ductal_epithelial sample=Panc1_PM00006
     shortLabel Panc1 Percent
-    longLabel Panc1 (Pancreatic ductal epithelial) FIRE Percent Accessible Hap1, PM00006
+    longLabel Panc1 (Pancreatic ductal epithelial) Fiber-seq Percent Accessible Hap1, PM00006
 
     track fireComp_ACCESSHAP1_THP_1_PM00007
     parent fireCompendiumViewACCESSHAP1
@@ -553,7 +553,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSHAP1 cellType=Monocyte_myeloid sample=THP_1_PM00007
     shortLabel THP-1 Percent
-    longLabel THP-1 (Monocyte (myeloid)) FIRE Percent Accessible Hap1, PM00007
+    longLabel THP-1 (Monocyte (myeloid)) Fiber-seq Percent Accessible Hap1, PM00007
 
     track fireComp_ACCESSHAP1_H9_PM00011
     parent fireCompendiumViewACCESSHAP1
@@ -561,7 +561,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSHAP1 cellType=Embryonic_stem_cell sample=H9_PM00011
     shortLabel H9 Percent
-    longLabel H9 (Embryonic stem cell) FIRE Percent Accessible Hap1, PM00011
+    longLabel H9 (Embryonic stem cell) Fiber-seq Percent Accessible Hap1, PM00011
 
     track fireComp_ACCESSHAP1_HG01123_PS00971
     parent fireCompendiumViewACCESSHAP1
@@ -569,7 +569,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSHAP1 cellType=Lymphoblastoid_B_lymphocyte_EBV_transformed sample=HG01123_PS00971
     shortLabel HG01123 Percent
-    longLabel HG01123 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) FIRE Percent Accessi...
+    longLabel HG01123 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) Fiber-seq Percent Ac...
 
     track fireComp_ACCESSHAP1_HG01258_PS00972
     parent fireCompendiumViewACCESSHAP1
@@ -577,7 +577,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSHAP1 cellType=Lymphoblastoid_B_lymphocyte_EBV_transformed sample=HG01258_PS00972
     shortLabel HG01258 Percent
-    longLabel HG01258 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) FIRE Percent Accessi...
+    longLabel HG01258 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) Fiber-seq Percent Ac...
 
     track fireComp_ACCESSHAP1_HG01358_PS00973
     parent fireCompendiumViewACCESSHAP1
@@ -585,7 +585,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSHAP1 cellType=Lymphoblastoid_B_lymphocyte_EBV_transformed sample=HG01358_PS00973
     shortLabel HG01358 Percent
-    longLabel HG01358 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) FIRE Percent Accessi...
+    longLabel HG01358 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) Fiber-seq Percent Ac...
 
     track fireComp_ACCESSHAP1_HG01361_PS00974
     parent fireCompendiumViewACCESSHAP1
@@ -593,7 +593,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSHAP1 cellType=Lymphoblastoid_B_lymphocyte_EBV_transformed sample=HG01361_PS00974
     shortLabel HG01361 Percent
-    longLabel HG01361 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) FIRE Percent Accessi...
+    longLabel HG01361 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) Fiber-seq Percent Ac...
 
     track fireComp_ACCESSHAP1_HG01891_PS00975
     parent fireCompendiumViewACCESSHAP1
@@ -601,7 +601,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSHAP1 cellType=Lymphoblastoid_B_lymphocyte_EBV_transformed sample=HG01891_PS00975
     shortLabel HG01891 Percent
-    longLabel HG01891 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) FIRE Percent Accessi...
+    longLabel HG01891 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) Fiber-seq Percent Ac...
 
     track fireComp_ACCESSHAP1_HG02071_PS00976
     parent fireCompendiumViewACCESSHAP1
@@ -609,7 +609,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSHAP1 cellType=Lymphoblastoid_B_lymphocyte_EBV_transformed sample=HG02071_PS00976
     shortLabel HG02071 Percent
-    longLabel HG02071 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) FIRE Percent Accessi...
+    longLabel HG02071 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) Fiber-seq Percent Ac...
 
     track fireComp_ACCESSHAP1_HG02074_PS00977
     parent fireCompendiumViewACCESSHAP1
@@ -617,7 +617,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSHAP1 cellType=Lymphoblastoid_B_lymphocyte_EBV_transformed sample=HG02074_PS00977
     shortLabel HG02074 Percent
-    longLabel HG02074 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) FIRE Percent Accessi...
+    longLabel HG02074 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) Fiber-seq Percent Ac...
 
     track fireComp_ACCESSHAP1_HG02132_PS00978
     parent fireCompendiumViewACCESSHAP1
@@ -625,7 +625,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSHAP1 cellType=Lymphoblastoid_B_lymphocyte_EBV_transformed sample=HG02132_PS00978
     shortLabel HG02132 Percent
-    longLabel HG02132 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) FIRE Percent Accessi...
+    longLabel HG02132 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) Fiber-seq Percent Ac...
 
     track fireComp_ACCESSHAP1_HG02135_PS00979
     parent fireCompendiumViewACCESSHAP1
@@ -633,7 +633,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSHAP1 cellType=Lymphoblastoid_B_lymphocyte_EBV_transformed sample=HG02135_PS00979
     shortLabel HG02135 Percent
-    longLabel HG02135 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) FIRE Percent Accessi...
+    longLabel HG02135 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) Fiber-seq Percent Ac...
 
     track fireComp_ACCESSHAP1_HG02257_PS00980
     parent fireCompendiumViewACCESSHAP1
@@ -641,7 +641,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSHAP1 cellType=Lymphoblastoid_B_lymphocyte_EBV_transformed sample=HG02257_PS00980
     shortLabel HG02257 Percent
-    longLabel HG02257 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) FIRE Percent Accessi...
+    longLabel HG02257 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) Fiber-seq Percent Ac...
 
     track fireComp_ACCESSHAP1_HG02486_PS00981
     parent fireCompendiumViewACCESSHAP1
@@ -649,7 +649,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSHAP1 cellType=Lymphoblastoid_B_lymphocyte_EBV_transformed sample=HG02486_PS00981
     shortLabel HG02486 Percent
-    longLabel HG02486 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) FIRE Percent Accessi...
+    longLabel HG02486 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) Fiber-seq Percent Ac...
 
     track fireComp_ACCESSHAP1_HG02559_PS00982
     parent fireCompendiumViewACCESSHAP1
@@ -657,7 +657,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSHAP1 cellType=Lymphoblastoid_B_lymphocyte_EBV_transformed sample=HG02559_PS00982
     shortLabel HG02559 Percent
-    longLabel HG02559 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) FIRE Percent Accessi...
+    longLabel HG02559 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) Fiber-seq Percent Ac...
 
     track fireComp_ACCESSHAP1_HG02572_PS00983
     parent fireCompendiumViewACCESSHAP1
@@ -665,7 +665,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSHAP1 cellType=Lymphoblastoid_B_lymphocyte_EBV_transformed sample=HG02572_PS00983
     shortLabel HG02572 Percent
-    longLabel HG02572 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) FIRE Percent Accessi...
+    longLabel HG02572 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) Fiber-seq Percent Ac...
 
     track fireComp_ACCESSHAP1_HG02717_PS00984
     parent fireCompendiumViewACCESSHAP1
@@ -673,7 +673,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSHAP1 cellType=Lymphoblastoid_B_lymphocyte_EBV_transformed sample=HG02717_PS00984
     shortLabel HG02717 Percent
-    longLabel HG02717 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) FIRE Percent Accessi...
+    longLabel HG02717 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) Fiber-seq Percent Ac...
 
     track fireComp_ACCESSHAP1_HG02886_PS00985
     parent fireCompendiumViewACCESSHAP1
@@ -681,7 +681,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSHAP1 cellType=Lymphoblastoid_B_lymphocyte_EBV_transformed sample=HG02886_PS00985
     shortLabel HG02886 Percent
-    longLabel HG02886 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) FIRE Percent Accessi...
+    longLabel HG02886 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) Fiber-seq Percent Ac...
 
     track fireComp_ACCESSHAP1_HG03516_PS00986
     parent fireCompendiumViewACCESSHAP1
@@ -689,7 +689,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSHAP1 cellType=Lymphoblastoid_B_lymphocyte_EBV_transformed sample=HG03516_PS00986
     shortLabel HG03516 Percent
-    longLabel HG03516 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) FIRE Percent Accessi...
+    longLabel HG03516 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) Fiber-seq Percent Ac...
 
     track fireComp_ACCESSHAP1_HG03804_PS00987
     parent fireCompendiumViewACCESSHAP1
@@ -697,7 +697,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSHAP1 cellType=Lymphoblastoid_B_lymphocyte_EBV_transformed sample=HG03804_PS00987
     shortLabel HG03804 Percent
-    longLabel HG03804 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) FIRE Percent Accessi...
+    longLabel HG03804 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) Fiber-seq Percent Ac...
 
     track fireComp_ACCESSHAP1_HG03942_PS00988
     parent fireCompendiumViewACCESSHAP1
@@ -705,7 +705,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSHAP1 cellType=Lymphoblastoid_B_lymphocyte_EBV_transformed sample=HG03942_PS00988
     shortLabel HG03942 Percent
-    longLabel HG03942 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) FIRE Percent Accessi...
+    longLabel HG03942 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) Fiber-seq Percent Ac...
 
     track fireComp_ACCESSHAP1_HG04160_PS00989
     parent fireCompendiumViewACCESSHAP1
@@ -713,7 +713,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSHAP1 cellType=Lymphoblastoid_B_lymphocyte_EBV_transformed sample=HG04160_PS00989
     shortLabel HG04160 Percent
-    longLabel HG04160 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) FIRE Percent Accessi...
+    longLabel HG04160 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) Fiber-seq Percent Ac...
 
     track fireComp_ACCESSHAP1_HG04187_PS00990
     parent fireCompendiumViewACCESSHAP1
@@ -721,7 +721,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSHAP1 cellType=Lymphoblastoid_B_lymphocyte_EBV_transformed sample=HG04187_PS00990
     shortLabel HG04187 Percent
-    longLabel HG04187 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) FIRE Percent Accessi...
+    longLabel HG04187 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) Fiber-seq Percent Ac...
 
     track fireComp_ACCESSHAP1_Hap1_PS01280
     parent fireCompendiumViewACCESSHAP1
@@ -729,7 +729,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSHAP1 cellType=Near_haploid_myeloid_CML_derived sample=Hap1_PS01280
     shortLabel Hap1 Percent
-    longLabel Hap1 (Near-haploid myeloid (CML-derived)) FIRE Percent Accessible Hap1, PS01280
+    longLabel Hap1 (Near-haploid myeloid (CML-derived)) Fiber-seq Percent Accessible Hap1,...
 
     track fireComp_ACCESSHAP1_A549_PS01302
     parent fireCompendiumViewACCESSHAP1
@@ -737,7 +737,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSHAP1 cellType=Lung_epithelial_adenocarcinoma sample=A549_PS01302
     shortLabel A549 Percent
-    longLabel A549 (Lung epithelial (adenocarcinoma)) FIRE Percent Accessible Hap1, PS01302
+    longLabel A549 (Lung epithelial (adenocarcinoma)) Fiber-seq Percent Accessible Hap1, PS...
 
     track fireComp_ACCESSHAP1_MCF_7_PS01305
     parent fireCompendiumViewACCESSHAP1
@@ -745,7 +745,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSHAP1 cellType=Breast_epithelial_adenocarcinoma sample=MCF_7_PS01305
     shortLabel MCF-7 Percent
-    longLabel MCF-7 (Breast epithelial (adenocarcinoma)) FIRE Percent Accessible Hap1, PS01305
+    longLabel MCF-7 (Breast epithelial (adenocarcinoma)) Fiber-seq Percent Accessible Hap1,...
 
     track fireComp_ACCESSHAP1_HCT116_PS01314
     parent fireCompendiumViewACCESSHAP1
@@ -753,7 +753,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSHAP1 cellType=Colon_epithelial_colorectal_carcinoma sample=HCT116_PS01314
     shortLabel HCT116 Percent
-    longLabel HCT116 (Colon epithelial (colorectal carcinoma)) FIRE Percent Accessible Hap1...
+    longLabel HCT116 (Colon epithelial (colorectal carcinoma)) Fiber-seq Percent Accessible...
 
     track fireComp_ACCESSHAP1_Caco_2_PS01319
     parent fireCompendiumViewACCESSHAP1
@@ -761,7 +761,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSHAP1 cellType=Colon_epithelial_colorectal_adenocarcinoma sample=Caco_2_PS01319
     shortLabel Caco-2 Percent
-    longLabel Caco-2 (Colon epithelial (colorectal adenocarcinoma)) FIRE Percent Accessible...
+    longLabel Caco-2 (Colon epithelial (colorectal adenocarcinoma)) Fiber-seq Percent Acces...
 
     track fireComp_ACCESSHAP1_WTC_11_PS01388
     parent fireCompendiumViewACCESSHAP1
@@ -769,7 +769,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSHAP1 cellType=Induced_pluripotent_stem_cell_iPSC sample=WTC_11_PS01388
     shortLabel WTC-11 Percent
-    longLabel WTC-11 (Induced pluripotent stem cell (iPSC)) FIRE Percent Accessible Hap1, P...
+    longLabel WTC-11 (Induced pluripotent stem cell (iPSC)) Fiber-seq Percent Accessible Ha...
 
     track fireComp_ACCESSHAP1_GM28572_PS01517
     parent fireCompendiumViewACCESSHAP1
@@ -777,7 +777,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSHAP1 cellType=Lymphoblastoid_B_lymphocyte_EBV_transformed sample=GM28572_PS01517
     shortLabel GM28572 Percent
-    longLabel GM28572 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) FIRE Percent Accessi...
+    longLabel GM28572 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) Fiber-seq Percent Ac...
 
     track fireComp_ACCESSHAP1_GM28570_PS01518
     parent fireCompendiumViewACCESSHAP1
@@ -785,7 +785,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSHAP1 cellType=Lymphoblastoid_B_lymphocyte_EBV_transformed sample=GM28570_PS01518
     shortLabel GM28570 Percent
-    longLabel GM28570 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) FIRE Percent Accessi...
+    longLabel GM28570 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) Fiber-seq Percent Ac...
 
     track fireComp_ACCESSHAP1_GM25456_PS01519
     parent fireCompendiumViewACCESSHAP1
@@ -793,7 +793,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSHAP1 cellType=Lymphoblastoid_B_lymphocyte_EBV_transformed sample=GM25456_PS01519
     shortLabel GM25456 Percent
-    longLabel GM25456 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) FIRE Percent Accessi...
+    longLabel GM25456 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) Fiber-seq Percent Ac...
 
     track fireComp_ACCESSHAP1_GM25455_PS01520
     parent fireCompendiumViewACCESSHAP1
@@ -801,7 +801,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSHAP1 cellType=Lymphoblastoid_B_lymphocyte_EBV_transformed sample=GM25455_PS01520
     shortLabel GM25455 Percent
-    longLabel GM25455 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) FIRE Percent Accessi...
+    longLabel GM25455 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) Fiber-seq Percent Ac...
 
     track fireComp_ACCESSHAP1_GM27730_PS01524
     parent fireCompendiumViewACCESSHAP1
@@ -809,7 +809,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSHAP1 cellType=Lymphoblastoid_B_lymphocyte_EBV_transformed sample=GM27730_PS01524
     shortLabel GM27730 Percent
-    longLabel GM27730 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) FIRE Percent Accessi...
+    longLabel GM27730 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) Fiber-seq Percent Ac...
 
     track fireComp_ACCESSHAP1_HG008_SC14_PS01680
     parent fireCompendiumViewACCESSHAP1
@@ -817,7 +817,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSHAP1 cellType=Pancreatic_ductal_adenocarcinoma_single_cell_clone sample=HG008_SC14_PS01680
     shortLabel HG008-SC14 Per...
-    longLabel HG008-SC14 (Pancreatic ductal adenocarcinoma (single-cell clone)) FIRE Percen...
+    longLabel HG008-SC14 (Pancreatic ductal adenocarcinoma (single-cell clone)) Fiber-seq P...
 
     track fireComp_ACCESSHAP1_HG008_3E4_PS01682
     parent fireCompendiumViewACCESSHAP1
@@ -825,7 +825,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSHAP1 cellType=Pancreatic_ductal_adenocarcinoma_single_cell_clone sample=HG008_3E4_PS01682
     shortLabel HG008-3E4 Percent
-    longLabel HG008-3E4 (Pancreatic ductal adenocarcinoma (single-cell clone)) FIRE Percent...
+    longLabel HG008-3E4 (Pancreatic ductal adenocarcinoma (single-cell clone)) Fiber-seq Pe...
 
     track fireComp_ACCESSHAP1_HG008_SC24_PS01684
     parent fireCompendiumViewACCESSHAP1
@@ -833,11 +833,11 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSHAP1 cellType=Pancreatic_ductal_adenocarcinoma_single_cell_clone sample=HG008_SC24_PS01684
     shortLabel HG008-SC24 Per...
-    longLabel HG008-SC24 (Pancreatic ductal adenocarcinoma (single-cell clone)) FIRE Percen...
+    longLabel HG008-SC24 (Pancreatic ductal adenocarcinoma (single-cell clone)) Fiber-seq P...
 
 
 track fireCompendiumViewACCESSHAP2
-shortLabel Percent Access...
+shortLabel Percent Accessible Hap2
 view ACCESSHAP2
 visibility hide
 parent fireCompendium
@@ -854,7 +854,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSHAP2 cellType=Lymphoblastoid_B_lymphocyte_EBV_transformed sample=GM12878_PM00001
     shortLabel GM12878 Percent
-    longLabel GM12878 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) FIRE Percent Accessi...
+    longLabel GM12878 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) Fiber-seq Percent Ac...
 
     track fireComp_ACCESSHAP2_K562_PM00004
     parent fireCompendiumViewACCESSHAP2
@@ -862,7 +862,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSHAP2 cellType=Erythroleukemia_myeloid sample=K562_PM00004
     shortLabel K562 Percent
-    longLabel K562 (Erythroleukemia / myeloid) FIRE Percent Accessible Hap2, PM00004
+    longLabel K562 (Erythroleukemia / myeloid) Fiber-seq Percent Accessible Hap2, PM00004
 
     track fireComp_ACCESSHAP2_HepG2_PM00005
     parent fireCompendiumViewACCESSHAP2
@@ -870,7 +870,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSHAP2 cellType=Hepatocyte_liver sample=HepG2_PM00005
     shortLabel HepG2 Percent
-    longLabel HepG2 (Hepatocyte (liver)) FIRE Percent Accessible Hap2, PM00005
+    longLabel HepG2 (Hepatocyte (liver)) Fiber-seq Percent Accessible Hap2, PM00005
 
     track fireComp_ACCESSHAP2_H1_PM00010
     parent fireCompendiumViewACCESSHAP2
@@ -878,7 +878,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSHAP2 cellType=Embryonic_stem_cell sample=H1_PM00010
     shortLabel H1 Percent
-    longLabel H1 (Embryonic stem cell) FIRE Percent Accessible Hap2, PM00010
+    longLabel H1 (Embryonic stem cell) Fiber-seq Percent Accessible Hap2, PM00010
 
     track fireComp_ACCESSHAP2_Hap1_PM00008
     parent fireCompendiumViewACCESSHAP2
@@ -886,7 +886,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSHAP2 cellType=Myeloid_near_haploid sample=Hap1_PM00008
     shortLabel Hap1 Percent
-    longLabel Hap1 (Myeloid (near-haploid)) FIRE Percent Accessible Hap2, PM00008
+    longLabel Hap1 (Myeloid (near-haploid)) Fiber-seq Percent Accessible Hap2, PM00008
 
     track fireComp_ACCESSHAP2_Hek293T_PS01332
     parent fireCompendiumViewACCESSHAP2
@@ -894,7 +894,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSHAP2 cellType=Human_embryonic_kidney sample=Hek293T_PS01332
     shortLabel Hek293T Percent
-    longLabel Hek293T (Human embryonic kidney) FIRE Percent Accessible Hap2, PS01332
+    longLabel Hek293T (Human embryonic kidney) Fiber-seq Percent Accessible Hap2, PS01332
 
     track fireComp_ACCESSHAP2_Jurkat_PM00009
     parent fireCompendiumViewACCESSHAP2
@@ -902,7 +902,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSHAP2 cellType=T_lymphocyte sample=Jurkat_PM00009
     shortLabel Jurkat Percent
-    longLabel Jurkat (T-lymphocyte) FIRE Percent Accessible Hap2, PM00009
+    longLabel Jurkat (T-lymphocyte) Fiber-seq Percent Accessible Hap2, PM00009
 
     track fireComp_ACCESSHAP2_HG002_PM00002
     parent fireCompendiumViewACCESSHAP2
@@ -910,7 +910,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSHAP2 cellType=Lymphoblastoid_B_lymphocyte_EBV_transformed sample=HG002_PM00002
     shortLabel HG002 Percent
-    longLabel HG002 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) FIRE Percent Accessibl...
+    longLabel HG002 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) Fiber-seq Percent Acce...
 
     track fireComp_ACCESSHAP2_Panc1_PM00006
     parent fireCompendiumViewACCESSHAP2
@@ -918,7 +918,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSHAP2 cellType=Pancreatic_ductal_epithelial sample=Panc1_PM00006
     shortLabel Panc1 Percent
-    longLabel Panc1 (Pancreatic ductal epithelial) FIRE Percent Accessible Hap2, PM00006
+    longLabel Panc1 (Pancreatic ductal epithelial) Fiber-seq Percent Accessible Hap2, PM00006
 
     track fireComp_ACCESSHAP2_THP_1_PM00007
     parent fireCompendiumViewACCESSHAP2
@@ -926,7 +926,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSHAP2 cellType=Monocyte_myeloid sample=THP_1_PM00007
     shortLabel THP-1 Percent
-    longLabel THP-1 (Monocyte (myeloid)) FIRE Percent Accessible Hap2, PM00007
+    longLabel THP-1 (Monocyte (myeloid)) Fiber-seq Percent Accessible Hap2, PM00007
 
     track fireComp_ACCESSHAP2_H9_PM00011
     parent fireCompendiumViewACCESSHAP2
@@ -934,7 +934,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSHAP2 cellType=Embryonic_stem_cell sample=H9_PM00011
     shortLabel H9 Percent
-    longLabel H9 (Embryonic stem cell) FIRE Percent Accessible Hap2, PM00011
+    longLabel H9 (Embryonic stem cell) Fiber-seq Percent Accessible Hap2, PM00011
 
     track fireComp_ACCESSHAP2_HG01123_PS00971
     parent fireCompendiumViewACCESSHAP2
@@ -942,7 +942,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSHAP2 cellType=Lymphoblastoid_B_lymphocyte_EBV_transformed sample=HG01123_PS00971
     shortLabel HG01123 Percent
-    longLabel HG01123 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) FIRE Percent Accessi...
+    longLabel HG01123 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) Fiber-seq Percent Ac...
 
     track fireComp_ACCESSHAP2_HG01258_PS00972
     parent fireCompendiumViewACCESSHAP2
@@ -950,7 +950,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSHAP2 cellType=Lymphoblastoid_B_lymphocyte_EBV_transformed sample=HG01258_PS00972
     shortLabel HG01258 Percent
-    longLabel HG01258 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) FIRE Percent Accessi...
+    longLabel HG01258 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) Fiber-seq Percent Ac...
 
     track fireComp_ACCESSHAP2_HG01358_PS00973
     parent fireCompendiumViewACCESSHAP2
@@ -958,7 +958,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSHAP2 cellType=Lymphoblastoid_B_lymphocyte_EBV_transformed sample=HG01358_PS00973
     shortLabel HG01358 Percent
-    longLabel HG01358 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) FIRE Percent Accessi...
+    longLabel HG01358 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) Fiber-seq Percent Ac...
 
     track fireComp_ACCESSHAP2_HG01361_PS00974
     parent fireCompendiumViewACCESSHAP2
@@ -966,7 +966,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSHAP2 cellType=Lymphoblastoid_B_lymphocyte_EBV_transformed sample=HG01361_PS00974
     shortLabel HG01361 Percent
-    longLabel HG01361 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) FIRE Percent Accessi...
+    longLabel HG01361 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) Fiber-seq Percent Ac...
 
     track fireComp_ACCESSHAP2_HG01891_PS00975
     parent fireCompendiumViewACCESSHAP2
@@ -974,7 +974,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSHAP2 cellType=Lymphoblastoid_B_lymphocyte_EBV_transformed sample=HG01891_PS00975
     shortLabel HG01891 Percent
-    longLabel HG01891 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) FIRE Percent Accessi...
+    longLabel HG01891 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) Fiber-seq Percent Ac...
 
     track fireComp_ACCESSHAP2_HG02071_PS00976
     parent fireCompendiumViewACCESSHAP2
@@ -982,7 +982,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSHAP2 cellType=Lymphoblastoid_B_lymphocyte_EBV_transformed sample=HG02071_PS00976
     shortLabel HG02071 Percent
-    longLabel HG02071 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) FIRE Percent Accessi...
+    longLabel HG02071 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) Fiber-seq Percent Ac...
 
     track fireComp_ACCESSHAP2_HG02074_PS00977
     parent fireCompendiumViewACCESSHAP2
@@ -990,7 +990,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSHAP2 cellType=Lymphoblastoid_B_lymphocyte_EBV_transformed sample=HG02074_PS00977
     shortLabel HG02074 Percent
-    longLabel HG02074 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) FIRE Percent Accessi...
+    longLabel HG02074 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) Fiber-seq Percent Ac...
 
     track fireComp_ACCESSHAP2_HG02132_PS00978
     parent fireCompendiumViewACCESSHAP2
@@ -998,7 +998,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSHAP2 cellType=Lymphoblastoid_B_lymphocyte_EBV_transformed sample=HG02132_PS00978
     shortLabel HG02132 Percent
-    longLabel HG02132 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) FIRE Percent Accessi...
+    longLabel HG02132 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) Fiber-seq Percent Ac...
 
     track fireComp_ACCESSHAP2_HG02135_PS00979
     parent fireCompendiumViewACCESSHAP2
@@ -1006,7 +1006,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSHAP2 cellType=Lymphoblastoid_B_lymphocyte_EBV_transformed sample=HG02135_PS00979
     shortLabel HG02135 Percent
-    longLabel HG02135 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) FIRE Percent Accessi...
+    longLabel HG02135 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) Fiber-seq Percent Ac...
 
     track fireComp_ACCESSHAP2_HG02257_PS00980
     parent fireCompendiumViewACCESSHAP2
@@ -1014,7 +1014,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSHAP2 cellType=Lymphoblastoid_B_lymphocyte_EBV_transformed sample=HG02257_PS00980
     shortLabel HG02257 Percent
-    longLabel HG02257 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) FIRE Percent Accessi...
+    longLabel HG02257 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) Fiber-seq Percent Ac...
 
     track fireComp_ACCESSHAP2_HG02486_PS00981
     parent fireCompendiumViewACCESSHAP2
@@ -1022,7 +1022,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSHAP2 cellType=Lymphoblastoid_B_lymphocyte_EBV_transformed sample=HG02486_PS00981
     shortLabel HG02486 Percent
-    longLabel HG02486 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) FIRE Percent Accessi...
+    longLabel HG02486 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) Fiber-seq Percent Ac...
 
     track fireComp_ACCESSHAP2_HG02559_PS00982
     parent fireCompendiumViewACCESSHAP2
@@ -1030,7 +1030,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSHAP2 cellType=Lymphoblastoid_B_lymphocyte_EBV_transformed sample=HG02559_PS00982
     shortLabel HG02559 Percent
-    longLabel HG02559 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) FIRE Percent Accessi...
+    longLabel HG02559 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) Fiber-seq Percent Ac...
 
     track fireComp_ACCESSHAP2_HG02572_PS00983
     parent fireCompendiumViewACCESSHAP2
@@ -1038,7 +1038,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSHAP2 cellType=Lymphoblastoid_B_lymphocyte_EBV_transformed sample=HG02572_PS00983
     shortLabel HG02572 Percent
-    longLabel HG02572 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) FIRE Percent Accessi...
+    longLabel HG02572 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) Fiber-seq Percent Ac...
 
     track fireComp_ACCESSHAP2_HG02717_PS00984
     parent fireCompendiumViewACCESSHAP2
@@ -1046,7 +1046,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSHAP2 cellType=Lymphoblastoid_B_lymphocyte_EBV_transformed sample=HG02717_PS00984
     shortLabel HG02717 Percent
-    longLabel HG02717 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) FIRE Percent Accessi...
+    longLabel HG02717 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) Fiber-seq Percent Ac...
 
     track fireComp_ACCESSHAP2_HG02886_PS00985
     parent fireCompendiumViewACCESSHAP2
@@ -1054,7 +1054,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSHAP2 cellType=Lymphoblastoid_B_lymphocyte_EBV_transformed sample=HG02886_PS00985
     shortLabel HG02886 Percent
-    longLabel HG02886 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) FIRE Percent Accessi...
+    longLabel HG02886 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) Fiber-seq Percent Ac...
 
     track fireComp_ACCESSHAP2_HG03516_PS00986
     parent fireCompendiumViewACCESSHAP2
@@ -1062,7 +1062,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSHAP2 cellType=Lymphoblastoid_B_lymphocyte_EBV_transformed sample=HG03516_PS00986
     shortLabel HG03516 Percent
-    longLabel HG03516 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) FIRE Percent Accessi...
+    longLabel HG03516 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) Fiber-seq Percent Ac...
 
     track fireComp_ACCESSHAP2_HG03804_PS00987
     parent fireCompendiumViewACCESSHAP2
@@ -1070,7 +1070,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSHAP2 cellType=Lymphoblastoid_B_lymphocyte_EBV_transformed sample=HG03804_PS00987
     shortLabel HG03804 Percent
-    longLabel HG03804 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) FIRE Percent Accessi...
+    longLabel HG03804 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) Fiber-seq Percent Ac...
 
     track fireComp_ACCESSHAP2_HG03942_PS00988
     parent fireCompendiumViewACCESSHAP2
@@ -1078,7 +1078,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSHAP2 cellType=Lymphoblastoid_B_lymphocyte_EBV_transformed sample=HG03942_PS00988
     shortLabel HG03942 Percent
-    longLabel HG03942 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) FIRE Percent Accessi...
+    longLabel HG03942 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) Fiber-seq Percent Ac...
 
     track fireComp_ACCESSHAP2_HG04160_PS00989
     parent fireCompendiumViewACCESSHAP2
@@ -1086,7 +1086,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSHAP2 cellType=Lymphoblastoid_B_lymphocyte_EBV_transformed sample=HG04160_PS00989
     shortLabel HG04160 Percent
-    longLabel HG04160 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) FIRE Percent Accessi...
+    longLabel HG04160 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) Fiber-seq Percent Ac...
 
     track fireComp_ACCESSHAP2_HG04187_PS00990
     parent fireCompendiumViewACCESSHAP2
@@ -1094,7 +1094,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSHAP2 cellType=Lymphoblastoid_B_lymphocyte_EBV_transformed sample=HG04187_PS00990
     shortLabel HG04187 Percent
-    longLabel HG04187 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) FIRE Percent Accessi...
+    longLabel HG04187 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) Fiber-seq Percent Ac...
 
     track fireComp_ACCESSHAP2_Hap1_PS01280
     parent fireCompendiumViewACCESSHAP2
@@ -1102,7 +1102,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSHAP2 cellType=Near_haploid_myeloid_CML_derived sample=Hap1_PS01280
     shortLabel Hap1 Percent
-    longLabel Hap1 (Near-haploid myeloid (CML-derived)) FIRE Percent Accessible Hap2, PS01280
+    longLabel Hap1 (Near-haploid myeloid (CML-derived)) Fiber-seq Percent Accessible Hap2,...
 
     track fireComp_ACCESSHAP2_A549_PS01302
     parent fireCompendiumViewACCESSHAP2
@@ -1110,7 +1110,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSHAP2 cellType=Lung_epithelial_adenocarcinoma sample=A549_PS01302
     shortLabel A549 Percent
-    longLabel A549 (Lung epithelial (adenocarcinoma)) FIRE Percent Accessible Hap2, PS01302
+    longLabel A549 (Lung epithelial (adenocarcinoma)) Fiber-seq Percent Accessible Hap2, PS...
 
     track fireComp_ACCESSHAP2_MCF_7_PS01305
     parent fireCompendiumViewACCESSHAP2
@@ -1118,7 +1118,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSHAP2 cellType=Breast_epithelial_adenocarcinoma sample=MCF_7_PS01305
     shortLabel MCF-7 Percent
-    longLabel MCF-7 (Breast epithelial (adenocarcinoma)) FIRE Percent Accessible Hap2, PS01305
+    longLabel MCF-7 (Breast epithelial (adenocarcinoma)) Fiber-seq Percent Accessible Hap2,...
 
     track fireComp_ACCESSHAP2_HCT116_PS01314
     parent fireCompendiumViewACCESSHAP2
@@ -1126,7 +1126,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSHAP2 cellType=Colon_epithelial_colorectal_carcinoma sample=HCT116_PS01314
     shortLabel HCT116 Percent
-    longLabel HCT116 (Colon epithelial (colorectal carcinoma)) FIRE Percent Accessible Hap2...
+    longLabel HCT116 (Colon epithelial (colorectal carcinoma)) Fiber-seq Percent Accessible...
 
     track fireComp_ACCESSHAP2_Caco_2_PS01319
     parent fireCompendiumViewACCESSHAP2
@@ -1134,7 +1134,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSHAP2 cellType=Colon_epithelial_colorectal_adenocarcinoma sample=Caco_2_PS01319
     shortLabel Caco-2 Percent
-    longLabel Caco-2 (Colon epithelial (colorectal adenocarcinoma)) FIRE Percent Accessible...
+    longLabel Caco-2 (Colon epithelial (colorectal adenocarcinoma)) Fiber-seq Percent Acces...
 
     track fireComp_ACCESSHAP2_WTC_11_PS01388
     parent fireCompendiumViewACCESSHAP2
@@ -1142,7 +1142,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSHAP2 cellType=Induced_pluripotent_stem_cell_iPSC sample=WTC_11_PS01388
     shortLabel WTC-11 Percent
-    longLabel WTC-11 (Induced pluripotent stem cell (iPSC)) FIRE Percent Accessible Hap2, P...
+    longLabel WTC-11 (Induced pluripotent stem cell (iPSC)) Fiber-seq Percent Accessible Ha...
 
     track fireComp_ACCESSHAP2_GM28572_PS01517
     parent fireCompendiumViewACCESSHAP2
@@ -1150,7 +1150,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSHAP2 cellType=Lymphoblastoid_B_lymphocyte_EBV_transformed sample=GM28572_PS01517
     shortLabel GM28572 Percent
-    longLabel GM28572 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) FIRE Percent Accessi...
+    longLabel GM28572 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) Fiber-seq Percent Ac...
 
     track fireComp_ACCESSHAP2_GM28570_PS01518
     parent fireCompendiumViewACCESSHAP2
@@ -1158,7 +1158,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSHAP2 cellType=Lymphoblastoid_B_lymphocyte_EBV_transformed sample=GM28570_PS01518
     shortLabel GM28570 Percent
-    longLabel GM28570 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) FIRE Percent Accessi...
+    longLabel GM28570 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) Fiber-seq Percent Ac...
 
     track fireComp_ACCESSHAP2_GM25456_PS01519
     parent fireCompendiumViewACCESSHAP2
@@ -1166,7 +1166,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSHAP2 cellType=Lymphoblastoid_B_lymphocyte_EBV_transformed sample=GM25456_PS01519
     shortLabel GM25456 Percent
-    longLabel GM25456 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) FIRE Percent Accessi...
+    longLabel GM25456 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) Fiber-seq Percent Ac...
 
     track fireComp_ACCESSHAP2_GM25455_PS01520
     parent fireCompendiumViewACCESSHAP2
@@ -1174,7 +1174,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSHAP2 cellType=Lymphoblastoid_B_lymphocyte_EBV_transformed sample=GM25455_PS01520
     shortLabel GM25455 Percent
-    longLabel GM25455 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) FIRE Percent Accessi...
+    longLabel GM25455 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) Fiber-seq Percent Ac...
 
     track fireComp_ACCESSHAP2_GM27730_PS01524
     parent fireCompendiumViewACCESSHAP2
@@ -1182,7 +1182,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSHAP2 cellType=Lymphoblastoid_B_lymphocyte_EBV_transformed sample=GM27730_PS01524
     shortLabel GM27730 Percent
-    longLabel GM27730 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) FIRE Percent Accessi...
+    longLabel GM27730 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) Fiber-seq Percent Ac...
 
     track fireComp_ACCESSHAP2_HG008_SC14_PS01680
     parent fireCompendiumViewACCESSHAP2
@@ -1190,7 +1190,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSHAP2 cellType=Pancreatic_ductal_adenocarcinoma_single_cell_clone sample=HG008_SC14_PS01680
     shortLabel HG008-SC14 Per...
-    longLabel HG008-SC14 (Pancreatic ductal adenocarcinoma (single-cell clone)) FIRE Percen...
+    longLabel HG008-SC14 (Pancreatic ductal adenocarcinoma (single-cell clone)) Fiber-seq P...
 
     track fireComp_ACCESSHAP2_HG008_3E4_PS01682
     parent fireCompendiumViewACCESSHAP2
@@ -1198,7 +1198,7 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSHAP2 cellType=Pancreatic_ductal_adenocarcinoma_single_cell_clone sample=HG008_3E4_PS01682
     shortLabel HG008-3E4 Percent
-    longLabel HG008-3E4 (Pancreatic ductal adenocarcinoma (single-cell clone)) FIRE Percent...
+    longLabel HG008-3E4 (Pancreatic ductal adenocarcinoma (single-cell clone)) Fiber-seq Pe...
 
     track fireComp_ACCESSHAP2_HG008_SC24_PS01684
     parent fireCompendiumViewACCESSHAP2
@@ -1206,11 +1206,11 @@ graphTypeDefault points
     type bigWig
     subGroups view=ACCESSHAP2 cellType=Pancreatic_ductal_adenocarcinoma_single_cell_clone sample=HG008_SC24_PS01684
     shortLabel HG008-SC24 Per...
-    longLabel HG008-SC24 (Pancreatic ductal adenocarcinoma (single-cell clone)) FIRE Percen...
+    longLabel HG008-SC24 (Pancreatic ductal adenocarcinoma (single-cell clone)) Fiber-seq P...
 
 
 track fireCompendiumViewPEAKS
-shortLabel FIRE Peaks
+shortLabel Peaks
 view PEAKS
 visibility hide
 parent fireCompendium
@@ -1221,357 +1221,357 @@ type bigNarrowPeak
     bigDataUrl https://s3.kopah.uw.edu/userprod/web/public/hashed.PacBio-Fiber-seq/PM00001/56c8efa47d30e7ffa5b12ebe6dd1e7c4/hg38/trackHub/bb/fire-peaks.bb
     type bigNarrowPeak
     subGroups view=PEAKS cellType=Lymphoblastoid_B_lymphocyte_EBV_transformed sample=GM12878_PM00001
-    shortLabel GM12878 FIRE
-    longLabel GM12878 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) FIRE FIRE Peaks, PM0...
+    shortLabel GM12878 Peaks
+    longLabel GM12878 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) Fiber-seq Peaks, PM0...
 
     track fireComp_PEAKS_K562_PM00004
     parent fireCompendiumViewPEAKS
     bigDataUrl https://s3.kopah.uw.edu/userprod/web/public/hashed.PacBio-Fiber-seq/PM00004/bab7c68a9ebb7a2b3c7201c7a7f4c2bf/hg38/trackHub/bb/fire-peaks.bb
     type bigNarrowPeak
     subGroups view=PEAKS cellType=Erythroleukemia_myeloid sample=K562_PM00004
-    shortLabel K562 FIRE
-    longLabel K562 (Erythroleukemia / myeloid) FIRE FIRE Peaks, PM00004
+    shortLabel K562 Peaks
+    longLabel K562 (Erythroleukemia / myeloid) Fiber-seq Peaks, PM00004
 
     track fireComp_PEAKS_HepG2_PM00005
     parent fireCompendiumViewPEAKS
     bigDataUrl https://s3.kopah.uw.edu/userprod/web/public/hashed.PacBio-Fiber-seq/PM00005/2917f9bdc4cdf28720fa5bf81eafb876/hg38/trackHub/bb/fire-peaks.bb
     type bigNarrowPeak
     subGroups view=PEAKS cellType=Hepatocyte_liver sample=HepG2_PM00005
-    shortLabel HepG2 FIRE
-    longLabel HepG2 (Hepatocyte (liver)) FIRE FIRE Peaks, PM00005
+    shortLabel HepG2 Peaks
+    longLabel HepG2 (Hepatocyte (liver)) Fiber-seq Peaks, PM00005
 
     track fireComp_PEAKS_H1_PM00010
     parent fireCompendiumViewPEAKS
     bigDataUrl https://s3.kopah.uw.edu/userprod/web/public/hashed.PacBio-Fiber-seq/PM00010/c8a8d41383128a1e3d26c4e5ff6754aa/hg38/trackHub/bb/fire-peaks.bb
     type bigNarrowPeak
     subGroups view=PEAKS cellType=Embryonic_stem_cell sample=H1_PM00010
-    shortLabel H1 FIRE
-    longLabel H1 (Embryonic stem cell) FIRE FIRE Peaks, PM00010
+    shortLabel H1 Peaks
+    longLabel H1 (Embryonic stem cell) Fiber-seq Peaks, PM00010
 
     track fireComp_PEAKS_Hap1_PM00008
     parent fireCompendiumViewPEAKS
     bigDataUrl https://s3.kopah.uw.edu/userprod/web/public/hashed.PacBio-Fiber-seq/PM00008/09ce0ae0ea79bd7a84b97ddc9a32fb38/hg38/trackHub/bb/fire-peaks.bb
     type bigNarrowPeak
     subGroups view=PEAKS cellType=Myeloid_near_haploid sample=Hap1_PM00008
-    shortLabel Hap1 FIRE
-    longLabel Hap1 (Myeloid (near-haploid)) FIRE FIRE Peaks, PM00008
+    shortLabel Hap1 Peaks
+    longLabel Hap1 (Myeloid (near-haploid)) Fiber-seq Peaks, PM00008
 
     track fireComp_PEAKS_Hek293T_PS01332
     parent fireCompendiumViewPEAKS
     bigDataUrl https://s3.kopah.uw.edu/userprod/web/public/hashed.PacBio-Fiber-seq/PS01332/a42b00828812c76f81649f5c518ab474/hg38/trackHub/bb/fire-peaks.bb
     type bigNarrowPeak
     subGroups view=PEAKS cellType=Human_embryonic_kidney sample=Hek293T_PS01332
-    shortLabel Hek293T FIRE
-    longLabel Hek293T (Human embryonic kidney) FIRE FIRE Peaks, PS01332
+    shortLabel Hek293T Peaks
+    longLabel Hek293T (Human embryonic kidney) Fiber-seq Peaks, PS01332
 
     track fireComp_PEAKS_Jurkat_PM00009
     parent fireCompendiumViewPEAKS
     bigDataUrl https://s3.kopah.uw.edu/userprod/web/public/hashed.PacBio-Fiber-seq/PM00009/41ffee46fb1292f6566d022e01d256c1/hg38/trackHub/bb/fire-peaks.bb
     type bigNarrowPeak
     subGroups view=PEAKS cellType=T_lymphocyte sample=Jurkat_PM00009
-    shortLabel Jurkat FIRE
-    longLabel Jurkat (T-lymphocyte) FIRE FIRE Peaks, PM00009
+    shortLabel Jurkat Peaks
+    longLabel Jurkat (T-lymphocyte) Fiber-seq Peaks, PM00009
 
     track fireComp_PEAKS_HG002_PM00002
     parent fireCompendiumViewPEAKS
     bigDataUrl https://s3.kopah.uw.edu/userprod/web/public/hashed.PacBio-Fiber-seq/PM00002/66537188deac5f1b93fbaeb25bc42e01/hg38/trackHub/bb/fire-peaks.bb
     type bigNarrowPeak
     subGroups view=PEAKS cellType=Lymphoblastoid_B_lymphocyte_EBV_transformed sample=HG002_PM00002
-    shortLabel HG002 FIRE
-    longLabel HG002 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) FIRE FIRE Peaks, PM00002
+    shortLabel HG002 Peaks
+    longLabel HG002 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) Fiber-seq Peaks, PM00002
 
     track fireComp_PEAKS_Panc1_PM00006
     parent fireCompendiumViewPEAKS
     bigDataUrl https://s3.kopah.uw.edu/userprod/web/public/hashed.PacBio-Fiber-seq/PM00006/d73722295e681ecf85cd2e65aa0e7c70/hg38/trackHub/bb/fire-peaks.bb
     type bigNarrowPeak
     subGroups view=PEAKS cellType=Pancreatic_ductal_epithelial sample=Panc1_PM00006
-    shortLabel Panc1 FIRE
-    longLabel Panc1 (Pancreatic ductal epithelial) FIRE FIRE Peaks, PM00006
+    shortLabel Panc1 Peaks
+    longLabel Panc1 (Pancreatic ductal epithelial) Fiber-seq Peaks, PM00006
 
     track fireComp_PEAKS_THP_1_PM00007
     parent fireCompendiumViewPEAKS
     bigDataUrl https://s3.kopah.uw.edu/userprod/web/public/hashed.PacBio-Fiber-seq/PM00007/d9bace2630b732dea835e6faa6a357da/hg38/trackHub/bb/fire-peaks.bb
     type bigNarrowPeak
     subGroups view=PEAKS cellType=Monocyte_myeloid sample=THP_1_PM00007
-    shortLabel THP-1 FIRE
-    longLabel THP-1 (Monocyte (myeloid)) FIRE FIRE Peaks, PM00007
+    shortLabel THP-1 Peaks
+    longLabel THP-1 (Monocyte (myeloid)) Fiber-seq Peaks, PM00007
 
     track fireComp_PEAKS_H9_PM00011
     parent fireCompendiumViewPEAKS
     bigDataUrl https://s3.kopah.uw.edu/userprod/web/public/hashed.PacBio-Fiber-seq/PM00011/919ef478b700e2788cfb45d787ef0e96/hg38/trackHub/bb/fire-peaks.bb
     type bigNarrowPeak
     subGroups view=PEAKS cellType=Embryonic_stem_cell sample=H9_PM00011
-    shortLabel H9 FIRE
-    longLabel H9 (Embryonic stem cell) FIRE FIRE Peaks, PM00011
+    shortLabel H9 Peaks
+    longLabel H9 (Embryonic stem cell) Fiber-seq Peaks, PM00011
 
     track fireComp_PEAKS_HG01123_PS00971
     parent fireCompendiumViewPEAKS
     bigDataUrl https://s3.kopah.uw.edu/userprod/web/public/hashed.PacBio-Fiber-seq/PS00971/32075e85354ac89edd4e9472caa93d3c/hg38/trackHub/bb/fire-peaks.bb
     type bigNarrowPeak
     subGroups view=PEAKS cellType=Lymphoblastoid_B_lymphocyte_EBV_transformed sample=HG01123_PS00971
-    shortLabel HG01123 FIRE
-    longLabel HG01123 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) FIRE FIRE Peaks, PS0...
+    shortLabel HG01123 Peaks
+    longLabel HG01123 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) Fiber-seq Peaks, PS0...
 
     track fireComp_PEAKS_HG01258_PS00972
     parent fireCompendiumViewPEAKS
     bigDataUrl https://s3.kopah.uw.edu/userprod/web/public/hashed.PacBio-Fiber-seq/PS00972/6131088532f16569cdfadb303c9251ff/hg38/trackHub/bb/fire-peaks.bb
     type bigNarrowPeak
     subGroups view=PEAKS cellType=Lymphoblastoid_B_lymphocyte_EBV_transformed sample=HG01258_PS00972
-    shortLabel HG01258 FIRE
-    longLabel HG01258 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) FIRE FIRE Peaks, PS0...
+    shortLabel HG01258 Peaks
+    longLabel HG01258 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) Fiber-seq Peaks, PS0...
 
     track fireComp_PEAKS_HG01358_PS00973
     parent fireCompendiumViewPEAKS
     bigDataUrl https://s3.kopah.uw.edu/userprod/web/public/hashed.PacBio-Fiber-seq/PS00973/868b57a6e0470f9b749761dc80c1d4b4/hg38/trackHub/bb/fire-peaks.bb
     type bigNarrowPeak
     subGroups view=PEAKS cellType=Lymphoblastoid_B_lymphocyte_EBV_transformed sample=HG01358_PS00973
-    shortLabel HG01358 FIRE
-    longLabel HG01358 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) FIRE FIRE Peaks, PS0...
+    shortLabel HG01358 Peaks
+    longLabel HG01358 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) Fiber-seq Peaks, PS0...
 
     track fireComp_PEAKS_HG01361_PS00974
     parent fireCompendiumViewPEAKS
     bigDataUrl https://s3.kopah.uw.edu/userprod/web/public/hashed.PacBio-Fiber-seq/PS00974/89b91e72dd977f456b2a00eb548d8c76/hg38/trackHub/bb/fire-peaks.bb
     type bigNarrowPeak
     subGroups view=PEAKS cellType=Lymphoblastoid_B_lymphocyte_EBV_transformed sample=HG01361_PS00974
-    shortLabel HG01361 FIRE
-    longLabel HG01361 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) FIRE FIRE Peaks, PS0...
+    shortLabel HG01361 Peaks
+    longLabel HG01361 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) Fiber-seq Peaks, PS0...
 
     track fireComp_PEAKS_HG01891_PS00975
     parent fireCompendiumViewPEAKS
     bigDataUrl https://s3.kopah.uw.edu/userprod/web/public/hashed.PacBio-Fiber-seq/PS00975/5497a65db4b1dc18f78e0fde852ca084/hg38/trackHub/bb/fire-peaks.bb
     type bigNarrowPeak
     subGroups view=PEAKS cellType=Lymphoblastoid_B_lymphocyte_EBV_transformed sample=HG01891_PS00975
-    shortLabel HG01891 FIRE
-    longLabel HG01891 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) FIRE FIRE Peaks, PS0...
+    shortLabel HG01891 Peaks
+    longLabel HG01891 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) Fiber-seq Peaks, PS0...
 
     track fireComp_PEAKS_HG02071_PS00976
     parent fireCompendiumViewPEAKS
     bigDataUrl https://s3.kopah.uw.edu/userprod/web/public/hashed.PacBio-Fiber-seq/PS00976/29ea847693b3d38d0d2849603df73cb2/hg38/trackHub/bb/fire-peaks.bb
     type bigNarrowPeak
     subGroups view=PEAKS cellType=Lymphoblastoid_B_lymphocyte_EBV_transformed sample=HG02071_PS00976
-    shortLabel HG02071 FIRE
-    longLabel HG02071 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) FIRE FIRE Peaks, PS0...
+    shortLabel HG02071 Peaks
+    longLabel HG02071 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) Fiber-seq Peaks, PS0...
 
     track fireComp_PEAKS_HG02074_PS00977
     parent fireCompendiumViewPEAKS
     bigDataUrl https://s3.kopah.uw.edu/userprod/web/public/hashed.PacBio-Fiber-seq/PS00977/dca57606102ce19dc9a99d788a2a3171/hg38/trackHub/bb/fire-peaks.bb
     type bigNarrowPeak
     subGroups view=PEAKS cellType=Lymphoblastoid_B_lymphocyte_EBV_transformed sample=HG02074_PS00977
-    shortLabel HG02074 FIRE
-    longLabel HG02074 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) FIRE FIRE Peaks, PS0...
+    shortLabel HG02074 Peaks
+    longLabel HG02074 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) Fiber-seq Peaks, PS0...
 
     track fireComp_PEAKS_HG02132_PS00978
     parent fireCompendiumViewPEAKS
     bigDataUrl https://s3.kopah.uw.edu/userprod/web/public/hashed.PacBio-Fiber-seq/PS00978/8ccfe29ff5a0093e8cfad2a727054d97/hg38/trackHub/bb/fire-peaks.bb
     type bigNarrowPeak
     subGroups view=PEAKS cellType=Lymphoblastoid_B_lymphocyte_EBV_transformed sample=HG02132_PS00978
-    shortLabel HG02132 FIRE
-    longLabel HG02132 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) FIRE FIRE Peaks, PS0...
+    shortLabel HG02132 Peaks
+    longLabel HG02132 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) Fiber-seq Peaks, PS0...
 
     track fireComp_PEAKS_HG02135_PS00979
     parent fireCompendiumViewPEAKS
     bigDataUrl https://s3.kopah.uw.edu/userprod/web/public/hashed.PacBio-Fiber-seq/PS00979/fa42dfae0df70d9bce4389a1b4681238/hg38/trackHub/bb/fire-peaks.bb
     type bigNarrowPeak
     subGroups view=PEAKS cellType=Lymphoblastoid_B_lymphocyte_EBV_transformed sample=HG02135_PS00979
-    shortLabel HG02135 FIRE
-    longLabel HG02135 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) FIRE FIRE Peaks, PS0...
+    shortLabel HG02135 Peaks
+    longLabel HG02135 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) Fiber-seq Peaks, PS0...
 
     track fireComp_PEAKS_HG02257_PS00980
     parent fireCompendiumViewPEAKS
     bigDataUrl https://s3.kopah.uw.edu/userprod/web/public/hashed.PacBio-Fiber-seq/PS00980/a340d9c3be89ac455752fb407495d6e3/hg38/trackHub/bb/fire-peaks.bb
     type bigNarrowPeak
     subGroups view=PEAKS cellType=Lymphoblastoid_B_lymphocyte_EBV_transformed sample=HG02257_PS00980
-    shortLabel HG02257 FIRE
-    longLabel HG02257 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) FIRE FIRE Peaks, PS0...
+    shortLabel HG02257 Peaks
+    longLabel HG02257 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) Fiber-seq Peaks, PS0...
 
     track fireComp_PEAKS_HG02486_PS00981
     parent fireCompendiumViewPEAKS
     bigDataUrl https://s3.kopah.uw.edu/userprod/web/public/hashed.PacBio-Fiber-seq/PS00981/e148a02e55a49027536fa02cf1ad054b/hg38/trackHub/bb/fire-peaks.bb
     type bigNarrowPeak
     subGroups view=PEAKS cellType=Lymphoblastoid_B_lymphocyte_EBV_transformed sample=HG02486_PS00981
-    shortLabel HG02486 FIRE
-    longLabel HG02486 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) FIRE FIRE Peaks, PS0...
+    shortLabel HG02486 Peaks
+    longLabel HG02486 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) Fiber-seq Peaks, PS0...
 
     track fireComp_PEAKS_HG02559_PS00982
     parent fireCompendiumViewPEAKS
     bigDataUrl https://s3.kopah.uw.edu/userprod/web/public/hashed.PacBio-Fiber-seq/PS00982/885268787c41c09ed7c1cabe8c1e6fc1/hg38/trackHub/bb/fire-peaks.bb
     type bigNarrowPeak
     subGroups view=PEAKS cellType=Lymphoblastoid_B_lymphocyte_EBV_transformed sample=HG02559_PS00982
-    shortLabel HG02559 FIRE
-    longLabel HG02559 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) FIRE FIRE Peaks, PS0...
+    shortLabel HG02559 Peaks
+    longLabel HG02559 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) Fiber-seq Peaks, PS0...
 
     track fireComp_PEAKS_HG02572_PS00983
     parent fireCompendiumViewPEAKS
     bigDataUrl https://s3.kopah.uw.edu/userprod/web/public/hashed.PacBio-Fiber-seq/PS00983/e5e3af18c23d821a70086aec8262fdc8/hg38/trackHub/bb/fire-peaks.bb
     type bigNarrowPeak
     subGroups view=PEAKS cellType=Lymphoblastoid_B_lymphocyte_EBV_transformed sample=HG02572_PS00983
-    shortLabel HG02572 FIRE
-    longLabel HG02572 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) FIRE FIRE Peaks, PS0...
+    shortLabel HG02572 Peaks
+    longLabel HG02572 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) Fiber-seq Peaks, PS0...
 
     track fireComp_PEAKS_HG02717_PS00984
     parent fireCompendiumViewPEAKS
     bigDataUrl https://s3.kopah.uw.edu/userprod/web/public/hashed.PacBio-Fiber-seq/PS00984/49dd2cf0726a10a4d8eb2c8221b6f8ac/hg38/trackHub/bb/fire-peaks.bb
     type bigNarrowPeak
     subGroups view=PEAKS cellType=Lymphoblastoid_B_lymphocyte_EBV_transformed sample=HG02717_PS00984
-    shortLabel HG02717 FIRE
-    longLabel HG02717 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) FIRE FIRE Peaks, PS0...
+    shortLabel HG02717 Peaks
+    longLabel HG02717 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) Fiber-seq Peaks, PS0...
 
     track fireComp_PEAKS_HG02886_PS00985
     parent fireCompendiumViewPEAKS
     bigDataUrl https://s3.kopah.uw.edu/userprod/web/public/hashed.PacBio-Fiber-seq/PS00985/a352ed22ad490f183e1a89fc600c55dc/hg38/trackHub/bb/fire-peaks.bb
     type bigNarrowPeak
     subGroups view=PEAKS cellType=Lymphoblastoid_B_lymphocyte_EBV_transformed sample=HG02886_PS00985
-    shortLabel HG02886 FIRE
-    longLabel HG02886 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) FIRE FIRE Peaks, PS0...
+    shortLabel HG02886 Peaks
+    longLabel HG02886 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) Fiber-seq Peaks, PS0...
 
     track fireComp_PEAKS_HG03516_PS00986
     parent fireCompendiumViewPEAKS
     bigDataUrl https://s3.kopah.uw.edu/userprod/web/public/hashed.PacBio-Fiber-seq/PS00986/e9150edc165f21c8b60f524e32232b34/hg38/trackHub/bb/fire-peaks.bb
     type bigNarrowPeak
     subGroups view=PEAKS cellType=Lymphoblastoid_B_lymphocyte_EBV_transformed sample=HG03516_PS00986
-    shortLabel HG03516 FIRE
-    longLabel HG03516 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) FIRE FIRE Peaks, PS0...
+    shortLabel HG03516 Peaks
+    longLabel HG03516 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) Fiber-seq Peaks, PS0...
 
     track fireComp_PEAKS_HG03804_PS00987
     parent fireCompendiumViewPEAKS
     bigDataUrl https://s3.kopah.uw.edu/userprod/web/public/hashed.PacBio-Fiber-seq/PS00987/9bcdcdbfedc59d7fef2cae0f1acbe3ea/hg38/trackHub/bb/fire-peaks.bb
     type bigNarrowPeak
     subGroups view=PEAKS cellType=Lymphoblastoid_B_lymphocyte_EBV_transformed sample=HG03804_PS00987
-    shortLabel HG03804 FIRE
-    longLabel HG03804 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) FIRE FIRE Peaks, PS0...
+    shortLabel HG03804 Peaks
+    longLabel HG03804 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) Fiber-seq Peaks, PS0...
 
     track fireComp_PEAKS_HG03942_PS00988
     parent fireCompendiumViewPEAKS
     bigDataUrl https://s3.kopah.uw.edu/userprod/web/public/hashed.PacBio-Fiber-seq/PS00988/67b785f2ac06480aff5811f5f668d6b4/hg38/trackHub/bb/fire-peaks.bb
     type bigNarrowPeak
     subGroups view=PEAKS cellType=Lymphoblastoid_B_lymphocyte_EBV_transformed sample=HG03942_PS00988
-    shortLabel HG03942 FIRE
-    longLabel HG03942 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) FIRE FIRE Peaks, PS0...
+    shortLabel HG03942 Peaks
+    longLabel HG03942 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) Fiber-seq Peaks, PS0...
 
     track fireComp_PEAKS_HG04160_PS00989
     parent fireCompendiumViewPEAKS
     bigDataUrl https://s3.kopah.uw.edu/userprod/web/public/hashed.PacBio-Fiber-seq/PS00989/c29fefa1065e2cc26d914d6c79891535/hg38/trackHub/bb/fire-peaks.bb
     type bigNarrowPeak
     subGroups view=PEAKS cellType=Lymphoblastoid_B_lymphocyte_EBV_transformed sample=HG04160_PS00989
-    shortLabel HG04160 FIRE
-    longLabel HG04160 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) FIRE FIRE Peaks, PS0...
+    shortLabel HG04160 Peaks
+    longLabel HG04160 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) Fiber-seq Peaks, PS0...
 
     track fireComp_PEAKS_HG04187_PS00990
     parent fireCompendiumViewPEAKS
     bigDataUrl https://s3.kopah.uw.edu/userprod/web/public/hashed.PacBio-Fiber-seq/PS00990/98c0504758e3c8cf4383f22658aac113/hg38/trackHub/bb/fire-peaks.bb
     type bigNarrowPeak
     subGroups view=PEAKS cellType=Lymphoblastoid_B_lymphocyte_EBV_transformed sample=HG04187_PS00990
-    shortLabel HG04187 FIRE
-    longLabel HG04187 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) FIRE FIRE Peaks, PS0...
+    shortLabel HG04187 Peaks
+    longLabel HG04187 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) Fiber-seq Peaks, PS0...
 
     track fireComp_PEAKS_Hap1_PS01280
     parent fireCompendiumViewPEAKS
     bigDataUrl https://s3.kopah.uw.edu/userprod/web/public/hashed.PacBio-Fiber-seq/PS01280/5c2003e664b7ff0c71cc49a70cddf416/hg38/trackHub/bb/fire-peaks.bb
     type bigNarrowPeak
     subGroups view=PEAKS cellType=Near_haploid_myeloid_CML_derived sample=Hap1_PS01280
-    shortLabel Hap1 FIRE
-    longLabel Hap1 (Near-haploid myeloid (CML-derived)) FIRE FIRE Peaks, PS01280
+    shortLabel Hap1 Peaks
+    longLabel Hap1 (Near-haploid myeloid (CML-derived)) Fiber-seq Peaks, PS01280
 
     track fireComp_PEAKS_A549_PS01302
     parent fireCompendiumViewPEAKS
     bigDataUrl https://s3.kopah.uw.edu/userprod/web/public/hashed.PacBio-Fiber-seq/PS01302/7b39ec1b123ae87b077dafc7d9090a1c/hg38/trackHub/bb/fire-peaks.bb
     type bigNarrowPeak
     subGroups view=PEAKS cellType=Lung_epithelial_adenocarcinoma sample=A549_PS01302
-    shortLabel A549 FIRE
-    longLabel A549 (Lung epithelial (adenocarcinoma)) FIRE FIRE Peaks, PS01302
+    shortLabel A549 Peaks
+    longLabel A549 (Lung epithelial (adenocarcinoma)) Fiber-seq Peaks, PS01302
 
     track fireComp_PEAKS_MCF_7_PS01305
     parent fireCompendiumViewPEAKS
     bigDataUrl https://s3.kopah.uw.edu/userprod/web/public/hashed.PacBio-Fiber-seq/PS01305/3f29e4e4b63b744ce4aeb72bbeecd70f/hg38/trackHub/bb/fire-peaks.bb
     type bigNarrowPeak
     subGroups view=PEAKS cellType=Breast_epithelial_adenocarcinoma sample=MCF_7_PS01305
-    shortLabel MCF-7 FIRE
-    longLabel MCF-7 (Breast epithelial (adenocarcinoma)) FIRE FIRE Peaks, PS01305
+    shortLabel MCF-7 Peaks
+    longLabel MCF-7 (Breast epithelial (adenocarcinoma)) Fiber-seq Peaks, PS01305
 
     track fireComp_PEAKS_HCT116_PS01314
     parent fireCompendiumViewPEAKS
     bigDataUrl https://s3.kopah.uw.edu/userprod/web/public/hashed.PacBio-Fiber-seq/PS01314/91cbfbadf9e012ed9a83a8987f7d12dd/hg38/trackHub/bb/fire-peaks.bb
     type bigNarrowPeak
     subGroups view=PEAKS cellType=Colon_epithelial_colorectal_carcinoma sample=HCT116_PS01314
-    shortLabel HCT116 FIRE
-    longLabel HCT116 (Colon epithelial (colorectal carcinoma)) FIRE FIRE Peaks, PS01314
+    shortLabel HCT116 Peaks
+    longLabel HCT116 (Colon epithelial (colorectal carcinoma)) Fiber-seq Peaks, PS01314
 
     track fireComp_PEAKS_Caco_2_PS01319
     parent fireCompendiumViewPEAKS
     bigDataUrl https://s3.kopah.uw.edu/userprod/web/public/hashed.PacBio-Fiber-seq/PS01319/c26fd5d56fd09f84ff28c7c4b9f99559/hg38/trackHub/bb/fire-peaks.bb
     type bigNarrowPeak
     subGroups view=PEAKS cellType=Colon_epithelial_colorectal_adenocarcinoma sample=Caco_2_PS01319
-    shortLabel Caco-2 FIRE
-    longLabel Caco-2 (Colon epithelial (colorectal adenocarcinoma)) FIRE FIRE Peaks, PS01319
+    shortLabel Caco-2 Peaks
+    longLabel Caco-2 (Colon epithelial (colorectal adenocarcinoma)) Fiber-seq Peaks, PS01319
 
     track fireComp_PEAKS_WTC_11_PS01388
     parent fireCompendiumViewPEAKS
     bigDataUrl https://s3.kopah.uw.edu/userprod/web/public/hashed.PacBio-Fiber-seq/PS01388/85dce624f9c36c4f2ff11bc22af93dd1/hg38/trackHub/bb/fire-peaks.bb
     type bigNarrowPeak
     subGroups view=PEAKS cellType=Induced_pluripotent_stem_cell_iPSC sample=WTC_11_PS01388
-    shortLabel WTC-11 FIRE
-    longLabel WTC-11 (Induced pluripotent stem cell (iPSC)) FIRE FIRE Peaks, PS01388
+    shortLabel WTC-11 Peaks
+    longLabel WTC-11 (Induced pluripotent stem cell (iPSC)) Fiber-seq Peaks, PS01388
 
     track fireComp_PEAKS_GM28572_PS01517
     parent fireCompendiumViewPEAKS
     bigDataUrl https://s3.kopah.uw.edu/userprod/web/public/hashed.PacBio-Fiber-seq/PS01517/0b5ee552d04d5730df674bd9ab288ce9/hg38/trackHub/bb/fire-peaks.bb
     type bigNarrowPeak
     subGroups view=PEAKS cellType=Lymphoblastoid_B_lymphocyte_EBV_transformed sample=GM28572_PS01517
-    shortLabel GM28572 FIRE
-    longLabel GM28572 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) FIRE FIRE Peaks, PS0...
+    shortLabel GM28572 Peaks
+    longLabel GM28572 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) Fiber-seq Peaks, PS0...
 
     track fireComp_PEAKS_GM28570_PS01518
     parent fireCompendiumViewPEAKS
     bigDataUrl https://s3.kopah.uw.edu/userprod/web/public/hashed.PacBio-Fiber-seq/PS01518/f185df42c50391eebc7e3b69d5fd945f/hg38/trackHub/bb/fire-peaks.bb
     type bigNarrowPeak
     subGroups view=PEAKS cellType=Lymphoblastoid_B_lymphocyte_EBV_transformed sample=GM28570_PS01518
-    shortLabel GM28570 FIRE
-    longLabel GM28570 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) FIRE FIRE Peaks, PS0...
+    shortLabel GM28570 Peaks
+    longLabel GM28570 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) Fiber-seq Peaks, PS0...
 
     track fireComp_PEAKS_GM25456_PS01519
     parent fireCompendiumViewPEAKS
     bigDataUrl https://s3.kopah.uw.edu/userprod/web/public/hashed.PacBio-Fiber-seq/PS01519/5612ea912092183984914c6d25998b1f/hg38/trackHub/bb/fire-peaks.bb
     type bigNarrowPeak
     subGroups view=PEAKS cellType=Lymphoblastoid_B_lymphocyte_EBV_transformed sample=GM25456_PS01519
-    shortLabel GM25456 FIRE
-    longLabel GM25456 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) FIRE FIRE Peaks, PS0...
+    shortLabel GM25456 Peaks
+    longLabel GM25456 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) Fiber-seq Peaks, PS0...
 
     track fireComp_PEAKS_GM25455_PS01520
     parent fireCompendiumViewPEAKS
     bigDataUrl https://s3.kopah.uw.edu/userprod/web/public/hashed.PacBio-Fiber-seq/PS01520/27d0455403f6b4221c7267604c468aff/hg38/trackHub/bb/fire-peaks.bb
     type bigNarrowPeak
     subGroups view=PEAKS cellType=Lymphoblastoid_B_lymphocyte_EBV_transformed sample=GM25455_PS01520
-    shortLabel GM25455 FIRE
-    longLabel GM25455 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) FIRE FIRE Peaks, PS0...
+    shortLabel GM25455 Peaks
+    longLabel GM25455 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) Fiber-seq Peaks, PS0...
 
     track fireComp_PEAKS_GM27730_PS01524
     parent fireCompendiumViewPEAKS
     bigDataUrl https://s3.kopah.uw.edu/userprod/web/public/hashed.PacBio-Fiber-seq/PS01524/8f7783e80526113d9dda6bb3ed387bee/hg38/trackHub/bb/fire-peaks.bb
     type bigNarrowPeak
     subGroups view=PEAKS cellType=Lymphoblastoid_B_lymphocyte_EBV_transformed sample=GM27730_PS01524
-    shortLabel GM27730 FIRE
-    longLabel GM27730 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) FIRE FIRE Peaks, PS0...
+    shortLabel GM27730 Peaks
+    longLabel GM27730 (Lymphoblastoid (B-lymphocyte, EBV-transformed)) Fiber-seq Peaks, PS0...
 
     track fireComp_PEAKS_HG008_SC14_PS01680
     parent fireCompendiumViewPEAKS
     bigDataUrl https://s3.kopah.uw.edu/userprod/web/public/hashed.PacBio-Fiber-seq/PS01680/e62d7a263d45e7c8aab1ba37073dcf8b/hg38/trackHub/bb/fire-peaks.bb
     type bigNarrowPeak
     subGroups view=PEAKS cellType=Pancreatic_ductal_adenocarcinoma_single_cell_clone sample=HG008_SC14_PS01680
-    shortLabel HG008-SC14 FIRE
-    longLabel HG008-SC14 (Pancreatic ductal adenocarcinoma (single-cell clone)) FIRE FIRE P...
+    shortLabel HG008-SC14 Peaks
+    longLabel HG008-SC14 (Pancreatic ductal adenocarcinoma (single-cell clone)) Fiber-seq P...
 
     track fireComp_PEAKS_HG008_3E4_PS01682
     parent fireCompendiumViewPEAKS
     bigDataUrl https://s3.kopah.uw.edu/userprod/web/public/hashed.PacBio-Fiber-seq/PS01682/7292f867d393025f3a3ce0dbb72deec3/hg38/trackHub/bb/fire-peaks.bb
     type bigNarrowPeak
     subGroups view=PEAKS cellType=Pancreatic_ductal_adenocarcinoma_single_cell_clone sample=HG008_3E4_PS01682
-    shortLabel HG008-3E4 FIRE
-    longLabel HG008-3E4 (Pancreatic ductal adenocarcinoma (single-cell clone)) FIRE FIRE Pe...
+    shortLabel HG008-3E4 Peaks
+    longLabel HG008-3E4 (Pancreatic ductal adenocarcinoma (single-cell clone)) Fiber-seq Pe...
 
     track fireComp_PEAKS_HG008_SC24_PS01684
     parent fireCompendiumViewPEAKS
     bigDataUrl https://s3.kopah.uw.edu/userprod/web/public/hashed.PacBio-Fiber-seq/PS01684/4675a175b21734616e6ca9b63ba27b62/hg38/trackHub/bb/fire-peaks.bb
     type bigNarrowPeak
     subGroups view=PEAKS cellType=Pancreatic_ductal_adenocarcinoma_single_cell_clone sample=HG008_SC24_PS01684
-    shortLabel HG008-SC24 FIRE
-    longLabel HG008-SC24 (Pancreatic ductal adenocarcinoma (single-cell clone)) FIRE FIRE P...
+    shortLabel HG008-SC24 Peaks
+    longLabel HG008-SC24 (Pancreatic ductal adenocarcinoma (single-cell clone)) Fiber-seq P...

@@ -155,7 +155,7 @@ SIMPLE_VIEWS = [
     ("ACCESSALL", "Percent_Accessible_All", "bw/all.percent.accessible.bw", "bigWig", {"color": "0,0,0", "viewLimits": "0:100", "autoScale": "off", "alwaysZero": "on", "graphTypeDefault": "points"}),
     ("ACCESSHAP1", "Percent_Accessible_Hap1", "bw/hap1.percent.accessible.bw", "bigWig", {"color": "0,0,255", "viewLimits": "0:100", "autoScale": "off", "alwaysZero": "on", "graphTypeDefault": "points"}),
     ("ACCESSHAP2", "Percent_Accessible_Hap2", "bw/hap2.percent.accessible.bw", "bigWig", {"color": "255,0,0", "viewLimits": "0:100", "autoScale": "off", "alwaysZero": "on", "graphTypeDefault": "points"}),
-    ("PEAKS", "FIRE_Peaks", "bb/fire-peaks.bb", "bigNarrowPeak", {}),
+    ("PEAKS", "Peaks", "bb/fire-peaks.bb", "bigNarrowPeak", {}),
 ]
 
 
@@ -187,7 +187,7 @@ def default_composite(samples: list[Sample], bad: frozenset[str] = frozenset()) 
         windowingFunction="mean",
         group="regulation",
         priority="1",
-        shortLabel="FIRE Accessibility",
+        shortLabel="Fiber-seq Accessibility",
         longLabel="Fiber-seq Accessibility",
         html="fire-description.html",
     )
@@ -202,12 +202,12 @@ def default_composite(samples: list[Sample], bad: frozenset[str] = frozenset()) 
             color=color,
             shortLabel=trunc(sample.sample, 17),
             longLabel=trunc(
-                f"{sample.sample} ({sample.tissue}) FIRE percent accessible chromatin, {sample.ps_id}", 80
+                f"{sample.sample} ({sample.tissue}) Fiber-seq percent accessible chromatin, {sample.ps_id}", 80
             ),
         )
         children.append(child)
 
-    text = "# Default track: overlapping FIRE percent-accessible chromatin, one color per sample\n"
+    text = "# Default track: overlapping Fiber-seq percent-accessible chromatin, one color per sample\n"
     text += parent + "\n\n"
     text += "\n\n".join("    " + line.replace("\n", "\n    ") for line in children)
     return text + "\n", urls
@@ -232,7 +232,7 @@ def compendium_composite(samples: list[Sample], bad: frozenset[str] = frozenset(
         [
             "track fireCompendium",
             "compositeTrack on",
-            "shortLabel FIRE Compendium",
+            "shortLabel Fiber-seq Compendium",
             "longLabel Fiber-seq Compendium",
             subgroup_line(1, "view", "Track_Type", view_tags),
             subgroup_line(2, "cellType", "Cell_Type", cell_tags),
@@ -255,7 +255,7 @@ def compendium_composite(samples: list[Sample], bad: frozenset[str] = frozenset(
     for tag, label, suffix, ttype, extra in SIMPLE_VIEWS:
         view_header = stanza(
             track=f"fireCompendiumView{tag}",
-            shortLabel=trunc(label.replace("_", " "), 17),
+            shortLabel=label.replace("_", " "),
             view=tag,
             visibility="hide",
             parent="fireCompendium",
@@ -275,7 +275,7 @@ def compendium_composite(samples: list[Sample], bad: frozenset[str] = frozenset(
                 type=ttype,
                 subGroups=f"view={tag} cellType={s.cell_tag} sample={s.sample_tag}",
                 shortLabel=trunc(f"{s.sample} {label.split('_')[0]}", 17),
-                longLabel=trunc(f"{s.sample} ({s.tissue}) FIRE {label.replace('_', ' ')}, {s.ps_id}", 80),
+                longLabel=trunc(f"{s.sample} ({s.tissue}) Fiber-seq {label.replace('_', ' ')}, {s.ps_id}", 80),
             )
             leaves.append("    " + leaf.replace("\n", "\n    "))
         if leaves:
@@ -315,8 +315,8 @@ def build() -> None:
         "\n".join(
             [
                 f"hub {HUB_NAME}",
-                "shortLabel FIRE Fiber-seq",
-                "longLabel Fiber-seq FIRE chromatin accessibility and regulatory elements",
+                "shortLabel Fiber-seq",
+                "longLabel Fiber-seq chromatin accessibility and regulatory elements",
                 "genomesFile genomes.txt",
                 f"email {CONTACT_EMAIL}",
                 "descriptionUrl hg38/fire-description.html",
