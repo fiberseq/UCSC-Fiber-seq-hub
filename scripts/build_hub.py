@@ -148,14 +148,21 @@ def check_urls(urls: list[str]) -> set[str]:
 # ---------------------------------------------------------------------------
 
 # Simple views: one leaf bigWig/bigBed track per sample, keyed by file suffix.
-# Kept to exactly the 4 file types the sheet links (total/hap1/hap2 percent
-# accessible + peaks) -- not the full per-sample hub's file set.
+# Kept to exactly the file types the sheet links -- not the full per-sample
+# hub's file set. Percent-accessible (all/hap1/hap2) is handled separately
+# below as one combined multiWig view rather than 3 separate rows.
 SIMPLE_VIEWS = [
-    # tag,          label,                        file suffix,                     type,              extra settings
-    ("ACCESSALL", "Percent_Accessible_All", "bw/all.percent.accessible.bw", "bigWig", {"color": "0,0,0", "viewLimits": "0:100", "autoScale": "off", "alwaysZero": "on", "graphTypeDefault": "points"}),
-    ("ACCESSHAP1", "Percent_Accessible_Hap1", "bw/hap1.percent.accessible.bw", "bigWig", {"color": "0,0,255", "viewLimits": "0:100", "autoScale": "off", "alwaysZero": "on", "graphTypeDefault": "points"}),
-    ("ACCESSHAP2", "Percent_Accessible_Hap2", "bw/hap2.percent.accessible.bw", "bigWig", {"color": "255,0,0", "viewLimits": "0:100", "autoScale": "off", "alwaysZero": "on", "graphTypeDefault": "points"}),
+    # tag,      label,     file suffix,          type,             extra settings
     ("PEAKS", "Peaks", "bb/fire-peaks.bb", "bigNarrowPeak", {}),
+]
+
+# Percent-accessible view: one matrix cell per sample, each a multiWig
+# overlay of all/hap1/hap2 in the hub's standard haplotype colors (hap1 =
+# blue, hap2 = red, all = black), matching the default track's own style.
+ACCESSIBILITY_SUBTRACKS = [
+    ("all", "bw/all.percent.accessible.bw", "0,0,0"),
+    ("hap1", "bw/hap1.percent.accessible.bw", "0,0,255"),
+    ("hap2", "bw/hap2.percent.accessible.bw", "255,0,0"),
 ]
 
 
@@ -210,6 +217,67 @@ def default_composite(samples: list[Sample], bad: frozenset[str] = frozenset()) 
     text = "# Default track: overlapping Fiber-seq percent-accessible chromatin, one color per sample\n"
     text += parent + "\n\n"
     text += "\n\n".join("    " + line.replace("\n", "\n    ") for line in children)
+    return text + "\n", urls
+
+
+def accessibility_supertrack(samples: list[Sample], bad: frozenset[str] = frozenset()) -> tuple[str, list[str]]:
+    """One selector per sample for percent-accessible chromatin: each is a
+    multiWig overlaying all/hap1/hap2 in the hub's standard haplotype colors
+    (hap1 blue, hap2 red, all black), same style as the default track.
+    A composite `view` can't have a multiWig container as a child (hubCheck
+    rejects it), so this lives as its own superTrack alongside the Peaks
+    matrix rather than as a row inside it."""
+    urls: list[str] = []
+    parent = stanza(
+        track="fireAccessibilityBySample",
+        superTrack="on",
+        shortLabel="Percent Accessible by Sample",
+        longLabel="Fiber-seq percent accessible chromatin, one multiWig per sample",
+        group="regulation",
+        priority="1.5",
+        html="fire-compendium-description.html",
+    )
+
+    children = []
+    for s in sorted(samples, key=lambda s: (s.tissue, s.sample)):
+        sub_children = []
+        for suffix_name, suffix, color in ACCESSIBILITY_SUBTRACKS:
+            url = f"{s.base_url}/{suffix}"
+            urls.append(url)
+            if url in bad:
+                continue
+            sub_children.append(
+                stanza(
+                    track=f"fireAccBySample_{s.sample_tag}_{suffix_name}",
+                    parent=f"fireAccBySample_{s.sample_tag}",
+                    bigDataUrl=url,
+                    type="bigWig",
+                    color=color,
+                )
+            )
+        if not sub_children:
+            continue
+        parent_leaf = stanza(
+            track=f"fireAccBySample_{s.sample_tag}",
+            parent="fireAccessibilityBySample",
+            container="multiWig",
+            aggregate="transparentOverlay",
+            showSubtrackColorOnUi="on",
+            type="bigWig 0 100",
+            viewLimits="0:100",
+            autoScale="off",
+            alwaysZero="on",
+            graphTypeDefault="points",
+            visibility="hide",
+            maxHeightPixels="100:50:8",
+            shortLabel=trunc(f"{s.sample} Accessible", 17),
+            longLabel=trunc(f"{s.sample} ({s.tissue}) Fiber-seq percent accessible chromatin, {s.ps_id}", 80),
+        )
+        children.append(parent_leaf)
+        children.extend(sub_children)
+
+    text = parent + "\n\n"
+    text += "\n\n".join("    " + block.replace("\n", "\n    ") for block in children)
     return text + "\n", urls
 
 
@@ -293,8 +361,9 @@ def build() -> None:
 
     # Pass 1: harvest every URL the hub would reference.
     _, default_urls = default_composite(samples)
+    _, accessibility_urls = accessibility_supertrack(samples)
     _, compendium_urls = compendium_composite(samples)
-    all_urls = sorted(set(default_urls) | set(compendium_urls))
+    all_urls = sorted(set(default_urls) | set(accessibility_urls) | set(compendium_urls))
 
     print(f"checking {len(all_urls)} data file URLs ...", file=sys.stderr)
     bad = frozenset(check_urls(all_urls))
@@ -307,6 +376,7 @@ def build() -> None:
 
     # Pass 2: regenerate, omitting any track whose data file is unreachable.
     default_text, _ = default_composite(samples, bad)
+    accessibility_text, _ = accessibility_supertrack(samples, bad)
     compendium_text, _ = compendium_composite(samples, bad)
 
     (HUB_DIR / "hg38").mkdir(parents=True, exist_ok=True)
@@ -331,6 +401,8 @@ def build() -> None:
 
     trackdb = (
         default_text
+        + "\n"
+        + accessibility_text
         + "\n"
         + compendium_text
     )
