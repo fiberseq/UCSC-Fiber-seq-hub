@@ -74,6 +74,16 @@ def sanitize_tag(text: str) -> str:
     return tag or "unknown"
 
 
+def sanitize_title(text: str) -> str:
+    """UCSC subGroup mTitle values are underscore-joined words with no other
+    punctuation (the browser swaps '_' back to spaces for display) -- sheet
+    tissue names like "Lymphoblastoid (B-lymphocyte, EBV-transformed)" have
+    parens/commas that silently break the composite's filter-by dropdown if
+    left in, so strip everything but alnum/hyphen/underscore."""
+    title = re.sub(r"[^A-Za-z0-9\-]+", "_", text).strip("_")
+    return title or "unknown"
+
+
 def trunc(text: str, limit: int) -> str:
     """ASCII-only truncation (UCSC labels should stay plain ASCII)."""
     if len(text) <= limit:
@@ -209,8 +219,8 @@ def compendium_composite(samples: list[Sample], bad: frozenset[str] = frozenset(
     # subGroups
     cell_tags = {}
     for s in samples:
-        cell_tags.setdefault(s.cell_tag, s.tissue.replace(" ", "_").replace("/", "_"))
-    sample_tags = {s.sample_tag: f"{s.sample}_{s.ps_id}" for s in samples}
+        cell_tags.setdefault(s.cell_tag, sanitize_title(s.tissue))
+    sample_tags = {s.sample_tag: sanitize_title(f"{s.sample}_{s.ps_id}") for s in samples}
 
     view_tags = {tag: label for tag, label, *_ in SIMPLE_VIEWS}
 
