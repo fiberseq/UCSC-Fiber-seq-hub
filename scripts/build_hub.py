@@ -20,6 +20,7 @@ Run: python3 scripts/build_hub.py
 from __future__ import annotations
 
 import csv
+import hashlib
 import io
 import re
 import sys
@@ -395,10 +396,6 @@ def build() -> None:
         )
     )
 
-    (HUB_DIR / "genomes.txt").write_text(
-        "\n".join(["genome hg38", "trackDb hg38/trackDb.txt", ""])
-    )
-
     trackdb = (
         default_text
         + "\n"
@@ -407,6 +404,19 @@ def build() -> None:
         + compendium_text
     )
     (HUB_DIR / "hg38" / "trackDb.txt").write_text(trackdb)
+
+    # UCSC caches a hub's trackDb.txt keyed on its own timestamp and can get
+    # permanently stuck serving a stale copy if that timestamp doesn't look
+    # strictly newer (see genome.ucsc.edu/goldenPath/help/hgTrackHubHelp.html
+    # "Debugging Track Hubs"). Querystring the URL with a content hash so
+    # every real content change is a brand-new resource to UCSC, sidestepping
+    # timestamp comparisons entirely.
+    trackdb_hash = hashlib.sha256(trackdb.encode()).hexdigest()[:10]
+    (HUB_DIR / "genomes.txt").write_text(
+        "\n".join(
+            ["genome hg38", f"trackDb hg38/trackDb.txt?v={trackdb_hash}", ""]
+        )
+    )
 
     n_default = sum(1 for s in samples if s.default)
     print(
