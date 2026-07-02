@@ -1,90 +1,69 @@
 # UCSC-Fiber-seq-hub
 
 A [UCSC Track Hub](https://genome.ucsc.edu/goldenPath/help/hgTrackHubHelp.html)
-for hg38 exposing [FIRE](https://github.com/fiberseq/FIRE) (Fiber-seq
-Inferred Regulatory Elements) chromatin accessibility and regulatory element
-calls across a compendium of cell lines and tissues.
+for hg38 exposing [FIRE](https://github.com/fiberseq/FIRE) (Fiber-seq Inferred
+Regulatory Elements) chromatin accessibility and peak calls across a
+compendium of cell lines and tissues.
 
 Hub URL: `https://fiberseq.github.io/UCSC-Fiber-seq-hub/hub.txt`
 
-Load it in the UCSC Genome Browser via **My Data → Track Hubs → My Hubs**,
-or append `&hubUrl=https://fiberseq.github.io/UCSC-Fiber-seq-hub/hub.txt`
-to any `hgTracks` URL. Add `&udcTimeout=1` while iterating -- UCSC otherwise
-caches hub files for up to 5 minutes.
+Load it via **My Data → Track Hubs → My Hubs**, or append
+`&hubUrl=<hub URL>` to any `hgTracks` URL (add `&udcTimeout=1` while iterating).
 
-## What's in the hub
+## Tracks
 
-Both tracks are grouped with "Regulation" so they sort next to ENCODE's
-cCREs/H3K27Ac tracks, and each has its own description page (shared Methods/
-Credits/References, distinct Display Conventions).
+Both are grouped under "Regulation" (next to ENCODE cCREs/H3K27Ac) and each
+has its own description page.
 
-- **Fiber-seq Accessibility** (`fire-accessibility-description.html`, on by
-  default): percent-accessible chromatin for a panel of commonly used cell
-  lines, overlaid as semi-transparent lines in different colors.
-- **Fiber-seq Compendium** (`fire-compendium-description.html`): every
-  sample × the 4 file types the sheet links (percent accessible
-  all/hap1/hap2, and peaks), organized as an ENCODE-style composite matrix.
-  Use the *Cell Type* filter to narrow the sample list, then check boxes in
-  the sample × track-type grid.
+- **Fiber-seq Accessibility** (on by default): percent-accessible chromatin
+  for the 7 default cell lines, overlaid as semi-transparent bars in a
+  colorblind-safe palette.
+- **Fiber-seq Compendium**: every sample × 4 file types (percent accessible
+  all/hap1/hap2, peaks) as an ENCODE-style composite matrix. Hidden overall
+  by default; an enabled subtrack renders `dense`. Filter by *Cell Type*, then
+  click the *Sample* or *Track Type* column header to group either way.
 
-Each sample's raw bigWig/bigBed files live on Kopah S3
-(`s3.kopah.uw.edu/.../hashed.PacBio-Fiber-seq/<PS-ID>/...`) as their own
-independent per-sample track hubs — this repo only builds a merged
-`hub.txt`/`genomes.txt`/`trackDb.txt` that points at them. No sequencing data
-lives in this repo.
+Raw bigWig/bigBed files live on Kopah S3 as per-sample hubs; this repo only
+builds the merged `hub.txt`/`genomes.txt`/`trackDb.txt` pointing at them. No
+sequencing data is stored here.
 
-## Repo layout
+## Build
 
-- The [lab's tracking sheet](https://docs.google.com/spreadsheets/d/e/2PACX-1vTmfYPsh-QeNk7gwcw1IYQUaHGSChoKlbLVon7imcSzEI3mzVCv78HPzjaPb_TK3HDUhiTFBEijXP6W/pub?output=csv)
-  is the master sample list — `scripts/build_hub.py` fetches it live on
-  every run. A row is included once it has a sample name, a tissue, and a
-  working "total percent accessible" link; incomplete rows (still being
-  annotated) are silently skipped until they're filled in.
-- `scripts/build_hub.py` — fetches the sheet and (re)writes `hub/`.
-  Stdlib-only Python.
-- `hub/` — the generated hub, committed to git (small text files only).
-  This directory is exactly what gets deployed to GitHub Pages.
-- `pixi.toml` — provides `hubCheck` (from bioconda) and the standard tasks
-  below. Run `pixi install` once to set up.
-
-## Regenerating the hub
+The [tracking sheet](https://docs.google.com/spreadsheets/d/e/2PACX-1vTmfYPsh-QeNk7gwcw1IYQUaHGSChoKlbLVon7imcSzEI3mzVCv78HPzjaPb_TK3HDUhiTFBEijXP6W/pub?output=csv)
+is the master sample list. `scripts/build_hub.py` (stdlib-only) fetches it
+live, templates each sample's file URLs, HEAD-checks them, and drops any
+unreachable file rather than shipping a broken link. A row is included once it
+has a name, tissue, and working "total % accessible" link. Only the sheet's
+first published tab is read, so rows parked in an `unused` tab are ignored.
 
 ```bash
-pixi run build
+pixi install            # one-time
+pixi run build          # regenerate hub/ from the sheet
+pixi run validate       # rebuild + hubCheck -noTracks (run before pushing)
+pixi run validate-full  # also re-fetches every bigWig/bigBed
 ```
 
-This fetches the sheet, templates every included sample's file URLs,
-HEAD-checks each one, and drops any track whose data file isn't reachable
-(with a warning) rather than shipping a broken link. Commit the resulting
-changes under `hub/`.
+Everything under `hub/` is committed and is exactly what deploys to GitHub
+Pages: `hub.txt`, `genomes.txt`, `hg38/trackDb.txt`, the two description
+pages, and `samples.tsv` — a machine-parseable manifest of what shipped (one
+row per sample; columns for name, PS ID, tissue, default flag, and each track
+type's data-file URL), served at `.../samples.tsv`. `genomes.txt` stamps the
+trackDb URL with a content hash (`trackDb.txt?v=<hash>`) so UCSC can't get
+stuck on a stale cached copy.
 
-## Adding a sample
+To add a sample: fill in its name, tissue, and links in the sheet, then
+`pixi run validate` and commit the `hub/` changes.
 
-Fill in its name, tissue, and file links in the tracking sheet, then re-run
-`pixi run validate` and commit the changes under `hub/`.
-
-## Validating before merging
-
-```bash
-pixi run validate          # primary: rebuild + hubCheck -noTracks (structure only)
-pixi run validate-full     # also re-fetches every bigWig/bigBed via hubCheck
-```
-
-`validate-full` is secondary — data-file reachability is already covered by
-`build_hub.py`'s own URL check. Both CI workflows currently run the fast
-`-noTracks` check (`.github/workflows/validate.yml` on every PR/push,
-`.github/workflows/deploy.yml` before publishing to GitHub Pages) to keep
-the iterate-and-deploy loop quick. **Before submitting to UCSC**, switch
-`deploy.yml` back to the full `-udcDir` check (see the TODO in that file) so
-a broken data link can't go live unnoticed.
+CI runs the fast `-noTracks` check on every push and before deploy. **Before
+submitting to UCSC**, switch `deploy.yml` to the full `-udcDir` check (see the
+TODO there) so a broken data link can't go live.
 
 ## Submitting to UCSC
 
-Once `hub/` passes `hubCheck` cleanly and has been spot-checked in the
-browser, email `genome@soe.ucsc.edu` with the hub.txt URL, a short
-description, and the citation below, per UCSC's
+Once `hub/` passes `hubCheck` and is spot-checked in the browser, email
+`genome@soe.ucsc.edu` with the hub.txt URL, a short description, and the
+citation, per the
 [Public Hub Guidelines](https://genome.ucsc.edu/goldenPath/help/publicHubGuidelines.html).
-Whether it's loaded by default for hg38 is UCSC's call.
 
 ## Citation
 
@@ -93,9 +72,11 @@ Vollger, M. R.\*†, Swanson, E. G.\*, Neph, S. J., et al., Stergachis, A. B.†
 chromatin epigenome. *Cell*, in press.
 [Preprint](https://doi.org/10.1101/2024.06.14.599122)
 
+Fiber-seq method: Stergachis, A. B., et al. (2020). Single-molecule regulatory
+architectures captured by chromatin fiber sequencing. *Science*
+368(6498):1449–1454. https://doi.org/10.1126/science.aaz1646
+
 ## Contact
 
-- Mitchell R. Vollger, Vollger Lab, Department of Human Genetics, University
-  of Utah — mrvollger@genetics.utah.edu
-- Andrew B. Stergachis, Department of Genome Sciences, University of
-  Washington — absterga@uw.edu
+Vollger Lab, University of Utah (mrvollger@genetics.utah.edu) ·
+Stergachis Lab, University of Washington (absterga@uw.edu)
