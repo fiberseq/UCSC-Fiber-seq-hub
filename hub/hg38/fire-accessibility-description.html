@@ -2,14 +2,12 @@
 <b>F</b>iber-seq <b>I</b>nferred <b>R</b>egulatory <b>E</b>lements (FIRE)
 
 <p>
-  This track overlays Fiber-seq percent-accessible chromatin for a panel of
-  commonly used cell lines. If you are unfamiliar with Fiber-seq please see
-  the references below for a detailed description, but in short it is useful
-  to think of it as a long-read, single-molecule, haplotype-resolved version
-  of DNaseI/ATAC-seq that can be used to identify regions of chromatin
-  accessibility. For the full per-sample, per-track-type compendium (peaks,
-  individual haplotypes, and every additional sample), see the
-  <b>Fiber-seq Compendium</b> track.
+  This track overlays single-molecule chromatin fiber sequencing (Fiber-seq)
+  FIRE percent-accessible chromatin signal for a panel of commonly used cell
+  lines. Fiber-seq is a long-read, single-molecule, haplotype-resolved
+  chromatin stenciling method for epigenomic mapping. For the full
+  per-sample, per-track-type compendium (peaks, individual haplotypes, and
+  every additional sample), see the <b>Fiber-seq Compendium</b> track.
 </p>
 
 <p>
@@ -22,8 +20,8 @@
 <h2>Display Conventions</h2>
 <p>
   This track is on by default and overlays percent-accessible chromatin for
-  GM12878, K562, HepG2, H1, Hap1, Hek293T, and Jurkat, each drawn in a
-  different color, as semi-transparent overlapping lines so regions of
+  GM12878, K562, HepG2, H1, Hap1, Hek293T, and Jurkat cells, each drawn in a
+  different color, as semi-transparent overlapping densities so regions of
   shared vs. cell-line-specific accessibility are visible at a glance.
 </p>
 
@@ -38,12 +36,12 @@
 
 <h2>Methods</h2>
 <p>
-  FIREs are MTase sensitive patches (MSPs) on Fiber-seq reads that are
+  FIREs are Modification Sensitive Patches (MSPs) on Fiber-seq reads that are
   inferred to be regulatory elements on single chromatin fibers, identified
-  using semi-supervised machine learning (the <code>Mokapot</code> framework
-  and <code>XGBoost</code>). Every individual FIRE element is associated with
-  a precision value, which indicates the probability that the FIRE element is
-  a true regulatory element. Please refer to
+  using semi-supervised machine learning (Vollger, Swanson et al.). Every
+  individual FIRE element is associated with a precision value, which
+  indicates the probability that the FIRE element is a regulatory element.
+  Please refer to
   <a href="https://fiberseq.github.io/" target="_blank"
     >https://fiberseq.github.io/</a
   >
@@ -57,8 +55,9 @@
   (<a href="mailto:mrvollger@genetics.utah.edu"
     >mrvollger@genetics.utah.edu</a
   >), and Andrew Stergachis, Department of Genome Sciences, University of
-  Washington (<a href="mailto:absterga@uw.edu">absterga@uw.edu</a>). This hub
-  is maintained by the Vollger Lab, University of Utah.
+  Washington (<a href="mailto:absterga@uw.edu">absterga@uw.edu</a>). Funding
+  provided by Google.org and the National Institutes of Health (NIH) grants
+  1DP5OD029630, UM1DA058220, 1U01HG013744, and R00GM155552.
 </p>
 
 <h2>References</h2>
@@ -69,5 +68,14 @@
   epigenome. <i>Cell</i>, in press.
   <a href="https://doi.org/10.1101/2024.06.14.599122" target="_blank"
     >Preprint DOI: https://doi.org/10.1101/2024.06.14.599122</a
+  >
+</p>
+<p>
+  Stergachis, A. B., Debo, B. M., Haugen, E., Churchman, L. S.,
+  Stamatoyannopoulos, J. A. (2020). Single-molecule regulatory architectures
+  captured by chromatin fiber sequencing. <i>Science</i>, 368(6498),
+  1449&ndash;1454.
+  <a href="https://doi.org/10.1126/science.aaz1646" target="_blank"
+    >https://doi.org/10.1126/science.aaz1646</a
   >
 </p>

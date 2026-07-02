@@ -6,7 +6,7 @@ showSubtrackColorOnUi on
 type bigWig 0 100
 viewLimits 0:100
 alwaysZero on
-graphTypeDefault points
+graphTypeDefault bar
 visibility full
 maxHeightPixels 100:50:8
 windowingFunction mean
