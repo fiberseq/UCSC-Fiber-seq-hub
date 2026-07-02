@@ -12,8 +12,10 @@ Load it via **My Data → Track Hubs → My Hubs**, or append
 
 ## Tracks
 
-Both are grouped under "Regulation" (next to ENCODE cCREs/H3K27Ac) and each
-has its own description page.
+Both live in the hub's own **Fiber-seq** track group — UCSC always lists hub
+tracks in their own section below the browser image, separate from the native
+groups (they can't be merged in next to ENCODE's cCREs) — and each has its own
+description page.
 
 - **Fiber-seq Accessibility** (on by default): percent-accessible chromatin
   for the 7 default cell lines, overlaid as semi-transparent bars in a
