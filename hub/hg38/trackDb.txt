@@ -93,7 +93,7 @@ priority 2
 track fireCompendiumViewACCESSALL
 shortLabel Percent Accessible All
 view ACCESSALL
-visibility hide
+visibility dense
 parent fireCompendium
 type bigWig
 color 0,0,0
@@ -466,7 +466,7 @@ graphTypeDefault points
 track fireCompendiumViewACCESSHAP1
 shortLabel Percent Accessible Hap1
 view ACCESSHAP1
-visibility hide
+visibility dense
 parent fireCompendium
 type bigWig
 color 0,0,255
@@ -839,7 +839,7 @@ graphTypeDefault points
 track fireCompendiumViewACCESSHAP2
 shortLabel Percent Accessible Hap2
 view ACCESSHAP2
-visibility hide
+visibility dense
 parent fireCompendium
 type bigWig
 color 255,0,0
@@ -1212,7 +1212,7 @@ graphTypeDefault points
 track fireCompendiumViewPEAKS
 shortLabel Peaks
 view PEAKS
-visibility hide
+visibility dense
 parent fireCompendium
 type bigNarrowPeak
 

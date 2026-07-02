@@ -254,11 +254,15 @@ def compendium_composite(samples: list[Sample], bad: frozenset[str] = frozenset(
 
     # -- simple views --
     for tag, label, suffix, ttype, extra in SIMPLE_VIEWS:
+        # Composite stays hidden overall (visibility hide above); the view's
+        # own visibility is the default display mode a subtrack uses once it's
+        # checked -- dense so an enabled sample shows up compactly rather than
+        # not at all.
         view_header = stanza(
             track=f"fireCompendiumView{tag}",
             shortLabel=label.replace("_", " "),
             view=tag,
-            visibility="hide",
+            visibility="dense",
             parent="fireCompendium",
             type=ttype,
             **extra,
