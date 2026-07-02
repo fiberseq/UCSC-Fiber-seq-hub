@@ -290,6 +290,27 @@ def compendium_composite(samples: list[Sample], bad: frozenset[str] = frozenset(
     return "\n\n".join(blocks) + "\n", urls
 
 
+def write_sample_table(samples: list[Sample], bad: frozenset[str]) -> None:
+    """Emit hub/samples.tsv: a machine-parseable manifest of what actually
+    shipped in the hub (one row per sample, a column per track type holding
+    the data-file URL or empty if it wasn't reachable). Handy for sharing the
+    sample list with e.g. UCSC. Also served at the hub's Pages URL."""
+    cols = ["sample", "ps_id", "tissue", "default"] + [
+        label.lower() for _tag, label, *_ in SIMPLE_VIEWS
+    ]
+    rows = [cols]
+    for s in samples:
+        row = [s.sample, s.ps_id, s.tissue, str(s.default).lower()]
+        for _tag, _label, suffix, _ttype, _extra in SIMPLE_VIEWS:
+            url = f"{s.base_url}/{suffix}"
+            row.append("" if url in bad else url)
+        assert len(row) == len(cols)
+        rows.append(row)
+    (HUB_DIR / "samples.tsv").write_text(
+        "\n".join("\t".join(r) for r in rows) + "\n"
+    )
+
+
 def build() -> None:
     print(f"fetching sample sheet from {SHEET_CSV_URL} ...", file=sys.stderr)
     samples = load_samples(fetch_sheet_csv())
@@ -332,6 +353,8 @@ def build() -> None:
 
     trackdb = default_text + "\n" + compendium_text
     (HUB_DIR / "hg38" / "trackDb.txt").write_text(trackdb)
+
+    write_sample_table(samples, bad)
 
     # UCSC caches a hub's trackDb.txt keyed on its own timestamp and can get
     # permanently stuck serving a stale copy if that timestamp doesn't look
