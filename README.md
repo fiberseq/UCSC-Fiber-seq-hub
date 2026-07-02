@@ -58,13 +58,6 @@ CI runs the fast `-noTracks` check on every push and before deploy. **Before
 submitting to UCSC**, switch `deploy.yml` to the full `-udcDir` check (see the
 TODO there) so a broken data link can't go live.
 
-## Submitting to UCSC
-
-Once `hub/` passes `hubCheck` and is spot-checked in the browser, email
-`genome@soe.ucsc.edu` with the hub.txt URL, a short description, and the
-citation, per the
-[Public Hub Guidelines](https://genome.ucsc.edu/goldenPath/help/publicHubGuidelines.html).
-
 ## Citation
 
 Vollger, M. R.\*†, Swanson, E. G.\*, Neph, S. J., et al., Stergachis, A. B.†
