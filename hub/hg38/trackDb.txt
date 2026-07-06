@@ -56,13 +56,13 @@ html fire-accessibility-description.html
     shortLabel Hap1
     longLabel Hap1 (Myeloid (near-haploid)) Fiber-seq percent accessible chromatin, PM00008
 
-    track fireDefault_Hek293T_PS01332
+    track fireDefault_Hek293T_PM00012
     parent fireDefaultAccessibility
-    bigDataUrl https://s3.kopah.uw.edu/userprod/web/public/hashed.PacBio-Fiber-seq/PS01332/a42b00828812c76f81649f5c518ab474/hg38/trackHub/bw/all.percent.accessible.bw
+    bigDataUrl https://s3.kopah.uw.edu/userprod/web/public/hashed.PacBio-Fiber-seq/PM00012/eb6e7dc0f85e205f584c65645f6da4b3/hg38/trackHub/bw/all.percent.accessible.bw
     type bigWig
     color 213,94,0
     shortLabel Hek293T
-    longLabel Hek293T (Human embryonic kidney) Fiber-seq percent accessible chromatin, PS01332
+    longLabel Hek293T (Human embryonic kidney) Fiber-seq percent accessible chromatin, PM00012
 
     track fireDefault_Jurkat_PM00009
     parent fireDefaultAccessibility
@@ -78,7 +78,7 @@ shortLabel Fiber-seq Compendium
 longLabel Fiber-seq Compendium
 subGroup1 view Track_Type ACCESSALL=Percent_Accessible_All ACCESSHAP1=Percent_Accessible_Hap1 ACCESSHAP2=Percent_Accessible_Hap2 PEAKS=Peaks
 subGroup2 cellType Cell_Type Lymphoblastoid_B_lymphocyte_EBV_transformed=Lymphoblastoid_B-lymphocyte_EBV-transformed Erythroleukemia_myeloid=Erythroleukemia_myeloid Hepatocyte_liver=Hepatocyte_liver Embryonic_stem_cell=Embryonic_stem_cell Myeloid_near_haploid=Myeloid_near-haploid Human_embryonic_kidney=Human_embryonic_kidney T_lymphocyte=T-lymphocyte Pancreatic_ductal_epithelial=Pancreatic_ductal_epithelial Monocyte_myeloid=Monocyte_myeloid Lung_epithelial_adenocarcinoma=Lung_epithelial_adenocarcinoma Breast_epithelial_adenocarcinoma=Breast_epithelial_adenocarcinoma Colon_epithelial_colorectal_carcinoma=Colon_epithelial_colorectal_carcinoma Colon_epithelial_colorectal_adenocarcinoma=Colon_epithelial_colorectal_adenocarcinoma Induced_pluripotent_stem_cell_iPSC=Induced_pluripotent_stem_cell_iPSC Pancreatic_ductal_adenocarcinoma_single_cell_clone=Pancreatic_ductal_adenocarcinoma_single-cell_clone
-subGroup3 sample Sample GM12878_PM00001=GM12878_PM00001 K562_PM00004=K562_PM00004 HepG2_PM00005=HepG2_PM00005 H1_PM00010=H1_PM00010 Hap1_PM00008=Hap1_PM00008 Hek293T_PS01332=Hek293T_PS01332 Jurkat_PM00009=Jurkat_PM00009 HG002_PM00002=HG002_PM00002 Panc1_PM00006=Panc1_PM00006 THP_1_PM00007=THP-1_PM00007 H9_PM00011=H9_PM00011 HG01123_PS00971=HG01123_PS00971 HG01258_PS00972=HG01258_PS00972 HG01358_PS00973=HG01358_PS00973 HG01361_PS00974=HG01361_PS00974 HG01891_PS00975=HG01891_PS00975 HG02071_PS00976=HG02071_PS00976 HG02074_PS00977=HG02074_PS00977 HG02132_PS00978=HG02132_PS00978 HG02135_PS00979=HG02135_PS00979 HG02257_PS00980=HG02257_PS00980 HG02486_PS00981=HG02486_PS00981 HG02559_PS00982=HG02559_PS00982 HG02572_PS00983=HG02572_PS00983 HG02717_PS00984=HG02717_PS00984 HG02886_PS00985=HG02886_PS00985 HG03516_PS00986=HG03516_PS00986 HG03804_PS00987=HG03804_PS00987 HG03942_PS00988=HG03942_PS00988 HG04160_PS00989=HG04160_PS00989 HG04187_PS00990=HG04187_PS00990 A549_PS01302=A549_PS01302 MCF_7_PS01305=MCF-7_PS01305 HCT116_PS01314=HCT116_PS01314 Caco_2_PS01319=Caco-2_PS01319 WTC_11_PS01388=WTC-11_PS01388 GM28572_PS01517=GM28572_PS01517 GM28570_PS01518=GM28570_PS01518 GM25456_PS01519=GM25456_PS01519 GM25455_PS01520=GM25455_PS01520 GM27730_PS01524=GM27730_PS01524 HG008_SC14_PS01680=HG008-SC14_PS01680 HG008_3E4_PS01682=HG008-3E4_PS01682 HG008_SC24_PS01684=HG008-SC24_PS01684
+subGroup3 sample Sample GM12878_PM00001=GM12878_PM00001 K562_PM00004=K562_PM00004 HepG2_PM00005=HepG2_PM00005 H1_PM00010=H1_PM00010 Hap1_PM00008=Hap1_PM00008 Hek293T_PM00012=Hek293T_PM00012 Jurkat_PM00009=Jurkat_PM00009 HG002_PM00002=HG002_PM00002 Panc1_PM00006=Panc1_PM00006 THP_1_PM00007=THP-1_PM00007 H9_PM00011=H9_PM00011 HG01123_PS00971=HG01123_PS00971 HG01258_PS00972=HG01258_PS00972 HG01358_PS00973=HG01358_PS00973 HG01361_PS00974=HG01361_PS00974 HG01891_PS00975=HG01891_PS00975 HG02071_PS00976=HG02071_PS00976 HG02074_PS00977=HG02074_PS00977 HG02132_PS00978=HG02132_PS00978 HG02135_PS00979=HG02135_PS00979 HG02257_PS00980=HG02257_PS00980 HG02486_PS00981=HG02486_PS00981 HG02559_PS00982=HG02559_PS00982 HG02572_PS00983=HG02572_PS00983 HG02717_PS00984=HG02717_PS00984 HG02886_PS00985=HG02886_PS00985 HG03516_PS00986=HG03516_PS00986 HG03804_PS00987=HG03804_PS00987 HG03942_PS00988=HG03942_PS00988 HG04160_PS00989=HG04160_PS00989 HG04187_PS00990=HG04187_PS00990 A549_PS01302=A549_PS01302 MCF_7_PS01305=MCF-7_PS01305 HCT116_PS01314=HCT116_PS01314 Caco_2_PS01319=Caco-2_PS01319 WTC_11_PS01388=WTC-11_PS01388 GM28572_PS01517=GM28572_PS01517 GM28570_PS01518=GM28570_PS01518 GM25456_PS01519=GM25456_PS01519 GM25455_PS01520=GM25455_PS01520 GM27730_PS01524=GM27730_PS01524 HG008_SC14_PS01680=HG008-SC14_PS01680 HG008_3E4_PS01682=HG008-3E4_PS01682 HG008_SC24_PS01684=HG008-SC24_PS01684
 dimensions dimX=sample dimY=view dimA=cellType
 filterComposite dimA
 sortOrder cellType=+ sample=+ view=+
@@ -142,13 +142,13 @@ graphTypeDefault points
     shortLabel Hap1 Percent
     longLabel Hap1 (Myeloid (near-haploid)) Fiber-seq Percent Accessible All, PM00008
 
-    track fireComp_ACCESSALL_Hek293T_PS01332
+    track fireComp_ACCESSALL_Hek293T_PM00012
     parent fireCompendiumViewACCESSALL
-    bigDataUrl https://s3.kopah.uw.edu/userprod/web/public/hashed.PacBio-Fiber-seq/PS01332/a42b00828812c76f81649f5c518ab474/hg38/trackHub/bw/all.percent.accessible.bw
+    bigDataUrl https://s3.kopah.uw.edu/userprod/web/public/hashed.PacBio-Fiber-seq/PM00012/eb6e7dc0f85e205f584c65645f6da4b3/hg38/trackHub/bw/all.percent.accessible.bw
     type bigWig
-    subGroups view=ACCESSALL cellType=Human_embryonic_kidney sample=Hek293T_PS01332
+    subGroups view=ACCESSALL cellType=Human_embryonic_kidney sample=Hek293T_PM00012
     shortLabel Hek293T Percent
-    longLabel Hek293T (Human embryonic kidney) Fiber-seq Percent Accessible All, PS01332
+    longLabel Hek293T (Human embryonic kidney) Fiber-seq Percent Accessible All, PM00012
 
     track fireComp_ACCESSALL_Jurkat_PM00009
     parent fireCompendiumViewACCESSALL
@@ -507,13 +507,13 @@ graphTypeDefault points
     shortLabel Hap1 Percent
     longLabel Hap1 (Myeloid (near-haploid)) Fiber-seq Percent Accessible Hap1, PM00008
 
-    track fireComp_ACCESSHAP1_Hek293T_PS01332
+    track fireComp_ACCESSHAP1_Hek293T_PM00012
     parent fireCompendiumViewACCESSHAP1
-    bigDataUrl https://s3.kopah.uw.edu/userprod/web/public/hashed.PacBio-Fiber-seq/PS01332/a42b00828812c76f81649f5c518ab474/hg38/trackHub/bw/hap1.percent.accessible.bw
+    bigDataUrl https://s3.kopah.uw.edu/userprod/web/public/hashed.PacBio-Fiber-seq/PM00012/eb6e7dc0f85e205f584c65645f6da4b3/hg38/trackHub/bw/hap1.percent.accessible.bw
     type bigWig
-    subGroups view=ACCESSHAP1 cellType=Human_embryonic_kidney sample=Hek293T_PS01332
+    subGroups view=ACCESSHAP1 cellType=Human_embryonic_kidney sample=Hek293T_PM00012
     shortLabel Hek293T Percent
-    longLabel Hek293T (Human embryonic kidney) Fiber-seq Percent Accessible Hap1, PS01332
+    longLabel Hek293T (Human embryonic kidney) Fiber-seq Percent Accessible Hap1, PM00012
 
     track fireComp_ACCESSHAP1_Jurkat_PM00009
     parent fireCompendiumViewACCESSHAP1
@@ -872,13 +872,13 @@ graphTypeDefault points
     shortLabel Hap1 Percent
     longLabel Hap1 (Myeloid (near-haploid)) Fiber-seq Percent Accessible Hap2, PM00008
 
-    track fireComp_ACCESSHAP2_Hek293T_PS01332
+    track fireComp_ACCESSHAP2_Hek293T_PM00012
     parent fireCompendiumViewACCESSHAP2
-    bigDataUrl https://s3.kopah.uw.edu/userprod/web/public/hashed.PacBio-Fiber-seq/PS01332/a42b00828812c76f81649f5c518ab474/hg38/trackHub/bw/hap2.percent.accessible.bw
+    bigDataUrl https://s3.kopah.uw.edu/userprod/web/public/hashed.PacBio-Fiber-seq/PM00012/eb6e7dc0f85e205f584c65645f6da4b3/hg38/trackHub/bw/hap2.percent.accessible.bw
     type bigWig
-    subGroups view=ACCESSHAP2 cellType=Human_embryonic_kidney sample=Hek293T_PS01332
+    subGroups view=ACCESSHAP2 cellType=Human_embryonic_kidney sample=Hek293T_PM00012
     shortLabel Hek293T Percent
-    longLabel Hek293T (Human embryonic kidney) Fiber-seq Percent Accessible Hap2, PS01332
+    longLabel Hek293T (Human embryonic kidney) Fiber-seq Percent Accessible Hap2, PM00012
 
     track fireComp_ACCESSHAP2_Jurkat_PM00009
     parent fireCompendiumViewACCESSHAP2
@@ -1232,13 +1232,13 @@ type bigNarrowPeak
     shortLabel Hap1 Peaks
     longLabel Hap1 (Myeloid (near-haploid)) Fiber-seq Peaks, PM00008
 
-    track fireComp_PEAKS_Hek293T_PS01332
+    track fireComp_PEAKS_Hek293T_PM00012
     parent fireCompendiumViewPEAKS
-    bigDataUrl https://s3.kopah.uw.edu/userprod/web/public/hashed.PacBio-Fiber-seq/PS01332/a42b00828812c76f81649f5c518ab474/hg38/trackHub/bb/fire-peaks.bb
+    bigDataUrl https://s3.kopah.uw.edu/userprod/web/public/hashed.PacBio-Fiber-seq/PM00012/eb6e7dc0f85e205f584c65645f6da4b3/hg38/trackHub/bb/fire-peaks.bb
     type bigNarrowPeak
-    subGroups view=PEAKS cellType=Human_embryonic_kidney sample=Hek293T_PS01332
+    subGroups view=PEAKS cellType=Human_embryonic_kidney sample=Hek293T_PM00012
     shortLabel Hek293T Peaks
-    longLabel Hek293T (Human embryonic kidney) Fiber-seq Peaks, PS01332
+    longLabel Hek293T (Human embryonic kidney) Fiber-seq Peaks, PM00012
 
     track fireComp_PEAKS_Jurkat_PM00009
     parent fireCompendiumViewPEAKS
